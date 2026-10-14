@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1080" />
+    <script src="vendor/gsap.min.js"></script>
+    <style>
+      :root {
+        --bg: #f4efe6;
+        --ink: #22262c;
+        --ink-soft: #5c6470;
+        --blue: #4a6b8a;
+        --blue-soft: #dbe4ec;
+        --cyan: #22b8e0;
+        --cyan-ink: #0a7f9e;
+        --accent: #e0532a;
+        --rule: #d9d2c5;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1080px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--bg);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: var(--bg);
+        font-family: Montserrat, sans-serif;
+        color: var(--ink);
+      }
+      .abs {
+        position: absolute;
+      }
+      .mono {
+        font-family: "JetBrains Mono", monospace;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .layer {
+        position: absolute;
+        left: 90px;
+        top: 230px;
+        width: 900px;
+        height: 540px;
+      }
+      .layer svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+        overflow: visible;
+      }
+
+      #header {
+        left: 90px;
+        top: 62px;
+        width: 900px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+        color: var(--ink-soft);
+      }
+      #header b {
+        color: var(--ink);
+        font-weight: 700;
+      }
+      #steps {
+        position: relative;
+        width: 260px;
+        height: 24px;
+      }
+      .step {
+        position: absolute;
+        right: 0;
+        top: 0;
+        white-space: nowrap;
+      }
+
+      .title {
+        left: 90px;
+        top: 150px;
+        width: 900px;
+        text-align: center;
+        font-size: 60px;
+        font-weight: 900;
+        letter-spacing: -0.01em;
+        line-height: 1;
+        white-space: nowrap;
+      }
+      .title .w {
+        display: inline-block;
+      }
+      .c-cyan {
+        color: var(--cyan-ink);
+      }
+      .c-heat {
+        color: var(--accent);
+      }
+      .c-blue {
+        color: var(--blue);
+      }
+
+      #macro {
+        left: 290px;
+        top: 270px;
+        width: 460px;
+        height: 460px;
+      }
+      #macro svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .side-label {
+        top: 690px;
+        width: 300px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+      }
+      #divider {
+        left: 539px;
+        top: 330px;
+        width: 2px;
+        height: 340px;
+        background: var(--rule);
+        transform-origin: center center;
+      }
+      #plus {
+        left: 490px;
+        top: 440px;
+        width: 100px;
+        height: 120px;
+        text-align: center;
+        font-size: 120px;
+        font-weight: 900;
+        line-height: 1;
+        color: var(--ink);
+      }
+      #emblem {
+        left: 390px;
+        top: 350px;
+        width: 300px;
+        height: 300px;
+      }
+      #emblem svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+        overflow: visible;
+      }
+
+      #final-title {
+        left: 90px;
+        top: 700px;
+        width: 900px;
+        text-align: center;
+        font-size: 66px;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        line-height: 1;
+        white-space: nowrap;
+      }
+      #final-title .w {
+        display: inline-block;
+      }
+      #final-rule {
+        left: 390px;
+        top: 806px;
+        width: 300px;
+        height: 4px;
+        border-radius: 2px;
+        background: var(--accent);
+      }
+      #final-sub {
+        left: 90px;
+        top: 836px;
+        width: 900px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 400;
+        color: var(--ink-soft);
+      }
+      #final-sub b {
+        color: var(--ink);
+        font-weight: 700;
+      }
+      #progress {
+        left: 90px;
+        top: 984px;
+        width: 900px;
+        height: 4px;
+        border-radius: 2px;
+        background: var(--rule);
+        overflow: hidden;
+      }
+      #progress-fill {
+        width: 100%;
+        height: 100%;
+        background: var(--ink);
+        transform-origin: left center;
+      }
+      svg text {
+        font-family: "JetBrains Mono", monospace;
+        letter-spacing: 0.14em;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="10"
+      data-width="1080"
+      data-height="1080"
+    >
+      <div id="header" class="abs mono">
+        <span><b>Shafik's</b> hypothesis</span>
+        <span id="steps">
+          <span class="step" id="step-1">Friction</span>
+          <span class="step" id="step-2">Charge</span>
+          <span class="step" id="step-3">Heat</span>
+          <span class="step" id="step-4">Combined</span>
+          <span class="step" id="step-5">Effect</span>
+        </span>
+      </div>
+
+      <div id="t1" class="abs title"><span class="w c-blue">POLYESTER</span> <span class="w c-cyan">+</span> <span class="w">FRICTION</span></div>
+      <div id="t2" class="abs title"><span class="w c-cyan">ELECTROSTATIC</span> <span class="w">CHARGE</span></div>
+      <div id="t3" class="abs title"><span class="w">TRAPPED</span> <span class="w c-heat">HEAT</span></div>
+      <div id="t4" class="abs title"><span class="w">COMBINED</span> <span class="w">EFFECT</span></div>
+
+      <!-- emblem sits behind the diagram so the production node covers its centre -->
+      <div id="emblem" class="abs">
+        <svg viewBox="-150 -150 300 300">
+          <defs>
+            <radialGradient id="emGlow">
+              <stop offset="0" stop-color="#e0532a" stop-opacity="0.85" />
+              <stop offset="0.6" stop-color="#e0532a" stop-opacity="0.35" />
+              <stop offset="1" stop-color="#e0532a" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <circle r="120" fill="url(#emGlow)" />
+          <circle r="100" fill="none" stroke="#22b8e0" stroke-width="12" opacity="0.18" />
+          <circle id="em-ring" r="100" fill="none" stroke="#22b8e0" stroke-width="4" stroke-dasharray="14 10" />
+        </svg>
+      </div>
+
+      <!-- macro view of the woven fibres -->
+      <div id="macro" class="abs">
+        <svg viewBox="-230 -230 460 460">
+          <defs>
+            <clipPath id="lens"><circle r="226" /></clipPath>
+          </defs>
+          <circle r="228" fill="#ffffff" />
+          <g clip-path="url(#lens)">
+            <g id="weave-a"></g>
+            <g id="weave-b"></g>
+            <g id="macro-sparks"></g>
+          </g>
+          <circle r="228" fill="none" stroke="#22262c" stroke-width="4" />
+        </svg>
+      </div>
+
+      <!-- main stage: fabric swatch -> cross-section -->
+      <div id="xs" class="layer">
+        <svg viewBox="-450 -270 900 540">
+          <defs>
+            <pattern id="weave" width="18" height="12" patternUnits="userSpaceOnUse">
+              <rect width="18" height="12" fill="#5f7f9d" />
+              <rect x="0" y="3" width="18" height="6" fill="#4a6b8a" />
+              <rect x="7" y="0" width="4" height="12" fill="#b9c8d6" opacity="0.8" />
+            </pattern>
+            <radialGradient id="heatGlow" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#e0532a" stop-opacity="0.9" />
+              <stop offset="1" stop-color="#e0532a" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <g id="field"></g>
+          <rect id="gap-tint" x="-370" y="-56" width="740" height="146" fill="#e0532a" opacity="0" />
+          <ellipse id="heat-glow" cx="0" cy="-40" rx="380" ry="60" fill="url(#heatGlow)" opacity="0" />
+          <g id="waves"></g>
+          <g id="sw">
+            <rect id="swatch" x="-220" y="-130" width="440" height="260" rx="18" fill="url(#weave)" stroke="#4a6b8a" stroke-width="3" />
+          </g>
+          <g id="charges"></g>
+          <g id="body">
+            <rect x="-370" y="90" width="740" height="110" rx="24" fill="#ead9c6" />
+            <text x="0" y="154" text-anchor="middle" font-size="22" fill="#6b5a48">BODY</text>
+          </g>
+          <text id="poly-label" x="370" y="-108" text-anchor="end" font-size="22" fill="#4a6b8a">POLYESTER</text>
+        </svg>
+      </div>
+
+      <!-- miniature static mechanism for the split screen -->
+      <div id="mini" class="layer">
+        <svg viewBox="-450 -270 900 540">
+          <g id="mini-field"></g>
+          <rect x="-220" y="-130" width="440" height="260" rx="18" fill="url(#weave)" stroke="#4a6b8a" stroke-width="3" />
+          <g id="mini-charges"></g>
+        </svg>
+      </div>
+
+      <div id="divider" class="abs"></div>
+      <div id="lbl-static" class="abs side-label c-cyan" style="left: 145px">STATIC</div>
+      <div id="lbl-heat" class="abs side-label c-heat" style="left: 635px">HEAT</div>
+      <div id="plus" class="abs">+</div>
+
+      <!-- production diagram -->
+      <div id="diagram" class="layer">
+        <svg viewBox="-450 -270 900 540">
+          <line x1="-168" y1="-30" x2="300" y2="-30" stroke="#dbe4ec" stroke-width="44" stroke-linecap="round" />
+          <circle cx="-240" cy="-30" r="72" fill="#ffffff" stroke="#4a6b8a" stroke-width="4" />
+          <g id="node-dots"></g>
+          <g id="flow"></g>
+          <rect x="340" y="-140" width="44" height="220" rx="12" fill="#ffffff" stroke="#4a6b8a" stroke-width="3" />
+          <rect id="gauge" x="346" y="-134" width="32" height="208" rx="8" fill="#4a6b8a" />
+          <text x="-240" y="118" text-anchor="middle" font-size="20" fill="#5c6470">PRODUCTION</text>
+          <text x="362" y="118" text-anchor="middle" font-size="20" fill="#5c6470">OUTPUT</text>
+        </svg>
+      </div>
+
+      <div id="final-title" class="abs"><span class="w c-heat">POTENTIAL</span> <span class="w">DISRUPTION</span></div>
+      <div id="final-rule" class="abs"></div>
+      <div id="final-sub" class="abs"><b>Proposed mechanism</b> — not established</div>
+
+      <div id="progress" class="abs"><div id="progress-fill"></div></div>
+    </div>
+
+    <script>
+      const NS = "http://www.w3.org/2000/svg";
+      const mk = (tag, attrs, parent) => {
+        const el = document.createElementNS(NS, tag);
+        for (const k in attrs) el.setAttribute(k, attrs[k]);
+        if (parent) parent.appendChild(el);
+        return el;
+      };
+      const CYAN = "#22b8e0";
+
+      // woven fibres: lighter cross threads under wavy main threads
+      function weave(group, y0, colors, cross) {
+        for (let x = -440; x <= 440; x += 28) {
+          mk("line", { x1: x, y1: y0 - 10, x2: x, y2: y0 + 94, stroke: cross, "stroke-width": 9, "stroke-linecap": "round" }, group);
+        }
+        for (let j = 0; j < 5; j++) {
+          const y = y0 + j * 21;
+          let d = "";
+          for (let x = -460; x <= 460; x += 10) {
+            const yy = y + 5 * Math.sin((x / 56) * Math.PI * 2 + j * Math.PI);
+            d += (x === -460 ? "M" : "L") + x + " " + yy.toFixed(1) + " ";
+          }
+          mk("path", { d, fill: "none", stroke: colors[j % 2], "stroke-width": 12, "stroke-linecap": "round" }, group);
+        }
+      }
+      weave(document.getElementById("weave-a"), -128, ["#4a6b8a", "#5f7f9d"], "#b9c8d6");
+      weave(document.getElementById("weave-b"), 36, ["#3b424b", "#555d68"], "#c4c8ce");
+
+      // a charge symbol (+ or -) in a small white disc
+      function charge(parent, x, y, sign, r = 13) {
+        const g = mk("g", {}, parent);
+        mk("circle", { cx: x, cy: y, r, fill: "#ffffff", stroke: CYAN, "stroke-width": 3 }, g);
+        const s = r * 0.5;
+        mk("line", { x1: x - s, y1: y, x2: x + s, y2: y, stroke: "#0a7f9e", "stroke-width": 3, "stroke-linecap": "round" }, g);
+        if (sign > 0) mk("line", { x1: x, y1: y - s, x2: x, y2: y + s, stroke: "#0a7f9e", "stroke-width": 3, "stroke-linecap": "round" }, g);
+        return g;
+      }
+
+      // scene 1: sparks between the rubbing layers
+      const macroSparks = document.getElementById("macro-sparks");
+      const sparkXs = [-170, -120, -70, -20, 30, 80, 130, 175, -150, 105];
+      const sparks = sparkXs.map((x, i) => charge(macroSparks, x, i % 2 ? 8 : -8, i % 2 ? -1 : 1, 12));
+      const dots = [];
+      for (let i = 0; i < 16; i++) {
+        dots.push(mk("circle", { cx: -190 + i * 25, cy: ((i * 37) % 30) - 15, r: 3.5, fill: CYAN }, macroSparks));
+      }
+
+      // field lines + surrounding charges (full size and miniature copy)
+      function fieldInto(fieldGroup, chargeGroup, count) {
+        const lines = [];
+        const glows = [];
+        [
+          [270, 170],
+          [330, 210],
+          [390, 250],
+        ].forEach(([rx, ry]) => {
+          glows.push(mk("ellipse", { rx, ry, fill: "none", stroke: CYAN, "stroke-width": 12, opacity: 0.12 }, fieldGroup));
+          lines.push(mk("ellipse", { rx, ry, fill: "none", stroke: CYAN, "stroke-width": 3, pathLength: 1, "stroke-dasharray": 1, "stroke-dashoffset": 1 }, fieldGroup));
+        });
+        const cs = [];
+        for (let i = 0; i < count; i++) {
+          const a = (i / count) * Math.PI * 2 + 0.2;
+          const rx = i % 2 ? 300 : 360;
+          const ry = i % 2 ? 190 : 230;
+          cs.push(charge(chargeGroup, Math.cos(a) * rx, Math.sin(a) * ry, i % 2 ? -1 : 1, 13));
+        }
+        return { lines, cs, glows };
+      }
+      const big = fieldInto(document.getElementById("field"), document.getElementById("charges"), 16);
+      const mini = fieldInto(document.getElementById("mini-field"), document.getElementById("mini-charges"), 10);
+      mini.lines.forEach((l) => l.setAttribute("stroke-dashoffset", 0));
+
+      // heat waves rising from the body toward the fabric
+      const wavesG = document.getElementById("waves");
+      const waves = [];
+      for (let k = 0; k < 7; k++) {
+        const x = -300 + k * 100;
+        const d = `M${x} 86 C${x + 14} 62 ${x - 14} 34 ${x} 12 C${x + 14} -10 ${x - 14} -32 ${x} -52`;
+        waves.push(mk("path", { d, fill: "none", stroke: "#e0532a", "stroke-width": 5, "stroke-linecap": "round", pathLength: 1, "stroke-dasharray": "0.42 1", "stroke-dashoffset": 0.42, opacity: 0 }, wavesG));
+      }
+
+      // production diagram: dots in the node and cells flowing along the tube
+      const nodeDots = document.getElementById("node-dots");
+      const nd = [
+        [-262, -50], [-222, -54], [-250, -16], [-214, -12], [-238, 8],
+      ].map(([x, y]) => mk("circle", { cx: x, cy: y, r: 8, fill: "#4a6b8a" }, nodeDots));
+      const flowG = document.getElementById("flow");
+      const CELL = (g) => {
+        mk("path", { d: "M-6 0 C0 -7 6 7 12 0 S20 -5 23 -1", fill: "none", stroke: "#4a6b8a", "stroke-width": 3, "stroke-linecap": "round" }, g);
+        mk("ellipse", { cx: -13, cy: 0, rx: 8, ry: 6, fill: "#4a6b8a" }, g);
+      };
+      // spawn time and travel duration per cell: steady output first, then slower and sparser
+      const flowPlan = [
+        [7.4, 0.7], [7.52, 0.7], [7.64, 0.7], [7.76, 0.7], [7.88, 0.7],
+        [8.0, 0.7], [8.12, 0.72], [8.24, 0.76], [8.38, 0.84], [8.56, 0.95],
+        [8.8, 1.1], [9.12, 1.3], [9.5, 1.5],
+      ];
+      const cells = flowPlan.map(() => {
+        const g = mk("g", { opacity: 0 }, flowG);
+        CELL(g);
+        return g;
+      });
+      function placeFlow(t) {
+        flowPlan.forEach(([s, d], i) => {
+          const p = (t - s) / d;
+          const g = cells[i];
+          if (p <= 0 || p >= 1) {
+            g.setAttribute("opacity", 0);
+            return;
+          }
+          const x = -150 + p * 430;
+          const y = -30 + 6 * Math.sin(p * 14 + i);
+          const o = Math.min(1, p / 0.08, (1 - p) / 0.08);
+          g.setAttribute("transform", `translate(${x.toFixed(1)} ${y.toFixed(1)})`);
+          g.setAttribute("opacity", o.toFixed(3));
+        });
+      }
+      placeFlow(0);
+
+      const tl = gsap.timeline({ paused: true });
+      const words = (sel) => document.querySelectorAll(sel + " .w");
+      function titleIn(sel, t) {
+        tl.fromTo(words(sel), { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: 0.42, ease: "power3.out", stagger: 0.07 }, t);
+      }
+      function titleOut(sel, t) {
+        tl.to(words(sel), { opacity: 0, y: -24, duration: 0.24, ease: "power2.in", stagger: 0.03 }, t);
+      }
+      function stepSwap(from, to, t) {
+        tl.to(from, { opacity: 0, y: -10, duration: 0.22 }, t);
+        tl.fromTo(to, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.28 }, t + 0.1);
+      }
+
+      // ---------- initial states ----------
+      gsap.set(document.querySelectorAll(".title .w"), { opacity: 0 });
+      gsap.set(["#step-2", "#step-3", "#step-4", "#step-5"], { opacity: 0 });
+      gsap.set([sparks, dots], { opacity: 0 });
+      gsap.set(["#xs", "#mini", "#divider", "#lbl-static", "#lbl-heat", "#plus", "#emblem", "#diagram"], { opacity: 0 });
+      gsap.set(big.cs, { opacity: 0 });
+      gsap.set(big.glows, { opacity: 0 });
+      gsap.set(["#body", "#poly-label"], { opacity: 0 });
+      gsap.set([document.querySelectorAll("#final-title .w"), "#final-rule", "#final-sub"], { opacity: 0 });
+
+      // ---------- 0 - 2  POLYESTER FRICTION ----------
+      tl.fromTo("#macro", { opacity: 0, scale: 0.86 }, { opacity: 1, scale: 1, duration: 0.6, ease: "power3.out" }, 0);
+      titleIn("#t1", 0.25);
+      // the two fabric layers rub back and forth
+      tl.fromTo("#weave-a", { x: -26 }, { x: 26, duration: 0.42, ease: "sine.inOut", yoyo: true, repeat: 4 }, 0.1);
+      tl.fromTo("#weave-b", { x: 26 }, { x: -26, duration: 0.42, ease: "sine.inOut", yoyo: true, repeat: 4 }, 0.1);
+      tl.fromTo(dots, { opacity: 0, scale: 0, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, stagger: 0.05, ease: "back.out(3)" }, 0.5);
+      tl.to(dots, { y: (i) => (i % 2 ? -10 : 10), duration: 1.0, ease: "sine.inOut" }, 0.8);
+      tl.fromTo(sparks, { opacity: 0, scale: 0, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, stagger: 0.09, ease: "back.out(2.5)" }, 0.75);
+
+      // ---------- 2 - 4  ELECTROSTATIC CHARGE ----------
+      titleOut("#t1", 1.82);
+      stepSwap("#step-1", "#step-2", 1.95);
+      // pull back: the macro lens shrinks into the swatch
+      tl.to("#macro", { scale: 0.28, opacity: 0, duration: 0.5, ease: "power3.inOut" }, 1.95);
+      tl.fromTo("#xs", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 2.05);
+      tl.fromTo("#sw", { scale: 2.1, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.6, ease: "power3.out" }, 2.0);
+      titleIn("#t2", 2.08);
+      tl.fromTo(big.cs, { opacity: 0, scale: 0, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, stagger: 0.035, ease: "back.out(2.5)" }, 2.35);
+      big.lines.forEach((l, i) => {
+        tl.fromTo(l, { attr: { "stroke-dashoffset": 1 } }, { attr: { "stroke-dashoffset": 0 }, duration: 0.6, ease: "power2.inOut" }, 2.55 + i * 0.12);
+      });
+      tl.fromTo(big.glows, { opacity: 0 }, { opacity: 0.12, duration: 0.5, stagger: 0.12 }, 2.6);
+      // gentle pulse of the field
+      tl.fromTo("#field", { opacity: 1, scale: 1, transformOrigin: "50% 50%" }, { opacity: 0.55, scale: 1.035, duration: 0.32, yoyo: true, repeat: 1, ease: "sine.inOut" }, 3.05);
+      tl.to(big.cs, { x: (i) => (i % 2 ? 6 : -6), y: (i) => (i % 3 ? -5 : 5), duration: 0.6, yoyo: true, repeat: 1, ease: "sine.inOut" }, 2.8);
+
+      // ---------- 4 - 6  TRAPPED HEAT ----------
+      titleOut("#t2", 3.82);
+      stepSwap("#step-2", "#step-3", 3.95);
+      tl.to(["#field", big.cs], { opacity: 0, duration: 0.3, ease: "power2.in" }, 3.9);
+      // swatch flattens into a cross-section layer above the body
+      tl.to("#swatch", { attr: { x: -370, y: -90, width: 740, height: 34, rx: 17 }, duration: 0.6, ease: "power3.inOut" }, 3.98);
+      tl.fromTo("#body", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 4.2);
+      tl.fromTo("#poly-label", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 4.45);
+      titleIn("#t3", 4.08);
+      // waves rise, cannot escape, and heat pools under the fabric
+      for (let c = 0; c < 4; c++) {
+        waves.forEach((w, k) => {
+          const t = 4.45 + c * 0.85 + k * 0.08;
+          if (t > 7.75) return;
+          tl.fromTo(
+            w,
+            { opacity: 1, attr: { "stroke-dashoffset": 0.42 } },
+            { opacity: 1, attr: { "stroke-dashoffset": -0.58 }, duration: 0.85, ease: "none", immediateRender: false },
+            t
+          );
+        });
+      }
+      tl.fromTo("#heat-glow", { opacity: 0 }, { opacity: 0.9, duration: 1.4, ease: "power1.in" }, 4.6);
+      tl.fromTo("#gap-tint", { opacity: 0 }, { opacity: 0.14, duration: 1.4, ease: "power1.in" }, 4.6);
+      tl.fromTo("#heat-glow", { attr: { ry: 40 } }, { attr: { ry: 70 }, duration: 1.4, ease: "power1.in" }, 4.6);
+
+      // ---------- 6 - 8  COMBINED EFFECT ----------
+      titleOut("#t3", 5.82);
+      stepSwap("#step-3", "#step-4", 5.95);
+      titleIn("#t4", 6.08);
+      // split screen: heat on the right, static on the left
+      tl.to("#xs", { x: 245, scale: 0.5, duration: 0.6, ease: "power3.inOut" }, 5.95);
+      tl.to("#poly-label", { opacity: 0, duration: 0.2 }, 5.95);
+      tl.fromTo("#mini", { opacity: 0, x: -340, scale: 0.5 }, { opacity: 1, x: -245, scale: 0.5, duration: 0.6, ease: "power3.out" }, 6.05);
+      tl.fromTo("#mini-field", { opacity: 1, scale: 1, transformOrigin: "50% 50%" }, { opacity: 0.55, scale: 1.04, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }, 6.4);
+      tl.fromTo("#divider", { opacity: 1, scaleY: 0 }, { opacity: 1, scaleY: 1, duration: 0.4, ease: "power3.out" }, 6.2);
+      tl.fromTo(["#lbl-static", "#lbl-heat"], { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.08 }, 6.4);
+      // the two mechanisms slide together around a "+"
+      tl.to("#divider", { opacity: 0, scaleY: 0, duration: 0.25 }, 6.95);
+      tl.to(["#lbl-static", "#lbl-heat"], { opacity: 0, duration: 0.2 }, 6.95);
+      tl.fromTo("#plus", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2.5)" }, 6.95);
+      tl.to("#mini", { x: -90, scale: 0.3, duration: 0.5, ease: "power3.inOut" }, 7.2);
+      tl.to("#xs", { x: 90, scale: 0.3, duration: 0.5, ease: "power3.inOut" }, 7.2);
+      tl.to(["#mini", "#xs"], { opacity: 0, duration: 0.2 }, 7.55);
+      tl.to("#plus", { scale: 0.4, opacity: 0, duration: 0.25, ease: "power2.in" }, 7.55);
+      tl.fromTo("#emblem", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.8)" }, 7.55);
+      tl.fromTo("#em-ring", { rotation: 0, transformOrigin: "50% 50%" }, { rotation: 140, duration: 2.45, ease: "none" }, 7.55);
+
+      // ---------- 8 - 10  POTENTIAL DISRUPTION ----------
+      titleOut("#t4", 7.85);
+      stepSwap("#step-4", "#step-5", 7.95);
+      tl.fromTo("#diagram", { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power2.out" }, 7.95);
+      // the combined effect settles around the production node
+      tl.to("#emblem", { x: -240, y: -30, scale: 1.0, duration: 0.55, ease: "power3.inOut" }, 8.0);
+      tl.to("#emblem", { opacity: 0.75, duration: 0.5 }, 8.55);
+      const flowClock = { t: 7.95 };
+      tl.fromTo(
+        flowClock,
+        { t: 7.95 },
+        { t: 10, duration: 2.05, ease: "none", onUpdate: () => placeFlow(flowClock.t) },
+        7.95
+      );
+      // the node's activity slows and the output gauge drops
+      tl.fromTo(nd, { opacity: 1 }, { opacity: 0.35, duration: 0.25, yoyo: true, repeat: 3, stagger: 0.06, ease: "sine.inOut" }, 8.0);
+      tl.to(nd, { opacity: (i) => (i < 2 ? 1 : 0.18), duration: 0.5 }, 9.05);
+      tl.to("#gauge", { attr: { y: -134 + 208 * 0.62, height: 208 * 0.38 }, fill: "#e0532a", duration: 1.1, ease: "power2.inOut" }, 8.55);
+      // final text
+      tl.fromTo(words("#final-title"), { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out", stagger: 0.09 }, 8.6);
+      tl.fromTo("#final-rule", { opacity: 1, scaleX: 0 }, { opacity: 1, scaleX: 1, duration: 0.4, ease: "power3.out" }, 8.95);
+      tl.fromTo("#final-sub", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 9.05);
+
+      tl.fromTo("#progress-fill", { scaleX: 0 }, { scaleX: 1, duration: 9.4, ease: "none" }, 0.1);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
