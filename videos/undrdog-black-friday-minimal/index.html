@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="vendor/gsap.min.js"></script>
+    <style>
+      /*
+        Minimal, poster-style cut. Every line of the offer is on screen by ~0.9s and
+        stays put; after that only the product breathes (slow push-in + one sheen).
+        polo.png / beanie.png: client product photos cut out with scripts/cutout.py.
+        #logo is a placeholder wordmark until the official logo file is supplied.
+      */
+      @font-face {
+        font-family: "Anton";
+        src: url("assets/fonts/anton.woff2") format("woff2");
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: "Barlow Condensed";
+        src: url("assets/fonts/barlow-condensed-500.woff2") format("woff2");
+        font-weight: 500;
+      }
+      @font-face {
+        font-family: "Barlow Condensed";
+        src: url("assets/fonts/barlow-condensed-700.woff2") format("woff2");
+        font-weight: 700;
+      }
+      :root {
+        --black: #0d0d0e;
+        --off: #efebe3;
+        --stage: #ece8e1;
+        --card: #dfd9cf;
+        --ink-soft: #5b5850;
+        --orange: #bb4e15;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: var(--stage);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: radial-gradient(70% 45% at 50% 62%, #f6f3ee 0%, var(--stage) 60%, #e3ded5 100%);
+        color: var(--black);
+        font-family: "Barlow Condensed", sans-serif;
+      }
+      .abs {
+        position: absolute;
+      }
+      .center {
+        left: 0;
+        width: 1080px;
+        text-align: center;
+      }
+      .anton {
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+        line-height: 1;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      .label {
+        font-weight: 700;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      .c-orange {
+        color: var(--orange);
+      }
+
+      /* ---------- black header band ---------- */
+      #band {
+        left: 0;
+        top: 0;
+        width: 1080px;
+        height: 400px;
+        background: var(--black);
+      }
+      #logo {
+        top: 76px;
+        font-size: 44px;
+        letter-spacing: 0.16em;
+        padding-left: 0.16em;
+        color: var(--off);
+      }
+      #bf {
+        top: 170px;
+        font-size: 170px;
+        letter-spacing: 0.02em;
+        padding-left: 0.02em;
+        color: var(--off);
+      }
+
+      /* ---------- offer ---------- */
+      #upto {
+        top: 450px;
+        font-size: 50px;
+        letter-spacing: 0.32em;
+        padding-left: 0.32em;
+        color: var(--orange);
+      }
+      #off {
+        top: 506px;
+        font-size: 272px;
+        letter-spacing: 0.01em;
+      }
+
+      /* ---------- product ---------- */
+      #polo-wrap {
+        left: 236px;
+        top: 812px;
+        width: 608px;
+        height: 760px;
+        transform-origin: 50% 55%;
+      }
+      #polo-shadow {
+        left: 250px;
+        top: 1540px;
+        width: 580px;
+        height: 70px;
+        border-radius: 50%;
+        background: radial-gradient(closest-side, rgba(40, 30, 20, 0.28), rgba(40, 30, 20, 0));
+      }
+      .prod {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .sheen {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(105deg, rgba(255, 250, 240, 0) 42%, rgba(255, 250, 240, 0.14) 50%, rgba(255, 250, 240, 0) 58%);
+        background-size: 300% 100%;
+        background-position: 100% 0;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+      }
+      #polo-sheen {
+        -webkit-mask-image: url("assets/polo.png");
+        mask-image: url("assets/polo.png");
+      }
+      #beanie-sheen {
+        -webkit-mask-image: url("assets/beanie.png");
+        mask-image: url("assets/beanie.png");
+      }
+
+      /* ---------- free beanie card ---------- */
+      #card {
+        left: 90px;
+        top: 1626px;
+        width: 900px;
+        height: 180px;
+        border-radius: 28px;
+        background: var(--card);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding-right: 20px;
+      }
+      #beanie-wrap {
+        position: relative;
+        width: 144px;
+        height: 144px;
+      }
+      #card-text {
+        position: relative;
+      }
+      #gift {
+        font-size: 80px;
+        letter-spacing: 0.01em;
+      }
+      #gift-sub {
+        margin-top: 8px;
+        font-size: 34px;
+        letter-spacing: 0.26em;
+        color: var(--ink-soft);
+      }
+
+      #footer {
+        top: 1846px;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 0.32em;
+        padding-left: 0.32em;
+        color: var(--ink-soft);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="6" data-width="1080" data-height="1920">
+      <div id="band" class="abs"></div>
+      <div id="logo" class="abs center anton">UNDRDOG</div>
+      <div id="bf" class="abs center anton">BLACK FRIDAY</div>
+
+      <div id="upto" class="abs center label">UP TO</div>
+      <div id="off" class="abs center anton">30<span class="c-orange">%</span> OFF</div>
+
+      <div id="polo-shadow" class="abs"></div>
+      <div id="polo-wrap" class="abs">
+        <img id="polo" class="prod" src="assets/polo.png" alt="UndrDog Project 008 polo, Midnight Black" />
+        <div id="polo-sheen" class="sheen"></div>
+      </div>
+
+      <div id="card" class="abs">
+        <div id="beanie-wrap">
+          <img id="beanie" class="prod" src="assets/beanie.png" alt="UndrDog beanie" />
+          <div id="beanie-sheen" class="sheen"></div>
+        </div>
+        <div id="card-text">
+          <div id="gift" class="anton"><span class="c-orange">+</span> FREE BEANIE</div>
+          <div id="gift-sub" class="label">WITH EVERY ORDER</div>
+        </div>
+      </div>
+
+      <div id="footer" class="abs center label">PROJECT 008 — THE POLO · MIDNIGHT BLACK</div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="6" data-track-index="1" data-volume="0.8"></audio>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // ---------- 0.0 - 0.9  everything settles into place, once ----------
+      const rise = (sel, t, dy = 24) =>
+        tl.fromTo(sel, { opacity: 0, y: dy }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, t);
+      rise("#logo", 0.0, 12);
+      rise("#bf", 0.06);
+      rise("#upto", 0.16);
+      rise("#off", 0.22);
+      tl.fromTo("#polo-wrap", { opacity: 0, scale: 0.96 }, { opacity: 1, scale: 1, duration: 0.7, ease: "power3.out" }, 0.3);
+      tl.fromTo("#polo-shadow", { opacity: 0 }, { opacity: 1, duration: 0.7, ease: "power2.out" }, 0.3);
+      rise("#card", 0.42);
+      tl.fromTo("#footer", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" }, 0.55);
+
+      // ---------- 1.0 - 6.0  hold: only the product breathes ----------
+      tl.to("#polo-wrap", { scale: 1.035, duration: 5.0, ease: "sine.inOut" }, 1.0);
+      tl.fromTo("#polo-sheen", { backgroundPosition: "100% 0" }, { backgroundPosition: "0% 0", duration: 1.3, ease: "power2.inOut" }, 1.9);
+      tl.fromTo("#beanie-sheen", { backgroundPosition: "100% 0" }, { backgroundPosition: "0% 0", duration: 1.0, ease: "power2.inOut" }, 3.3);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
