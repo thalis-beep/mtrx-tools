@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="vendor/gsap.min.js"></script>
+    <style>
+      /*
+        ASSET SLOTS — the official UndrDog files could not be downloaded from this sandbox.
+        Swap these four paths for the official assets (transparent PNG cutouts work best):
+          assets/polo-placeholder.svg    -> Midnight Black polo, front, cutout   (img + 2 masks)
+          assets/beanie-placeholder.svg  -> official promotional beanie, cutout  (img + 1 mask)
+          #logo wordmark text            -> <img src="assets/logo.svg">
+        Hide the draft labels by setting --ph-tag: none.
+      */
+      @font-face {
+        font-family: "Anton";
+        src: url("assets/fonts/anton.woff2") format("woff2");
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: "Barlow Condensed";
+        src: url("assets/fonts/barlow-condensed-500.woff2") format("woff2");
+        font-weight: 500;
+      }
+      @font-face {
+        font-family: "Barlow Condensed";
+        src: url("assets/fonts/barlow-condensed-700.woff2") format("woff2");
+        font-weight: 700;
+      }
+      :root {
+        --black: #0b0b0c;
+        --char: #17171a;
+        --char-2: #222226;
+        --off: #efebe3;
+        --off-dim: rgba(239, 235, 227, 0.62);
+        --orange: #e8742a;
+        --ph-tag: block;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: var(--black);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: radial-gradient(120% 80% at 50% 38%, #1d1d21 0%, var(--char) 45%, var(--black) 100%);
+        color: var(--off);
+        font-family: "Barlow Condensed", sans-serif;
+      }
+      .abs {
+        position: absolute;
+      }
+      .anton {
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+      .label {
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+      }
+      .center {
+        left: 0;
+        width: 1080px;
+        text-align: center;
+      }
+      .mask {
+        display: block;
+        overflow: hidden;
+      }
+      .mask > .in {
+        display: block;
+      }
+      .c-orange {
+        color: var(--orange);
+      }
+
+      /* ---------- atmosphere ---------- */
+      #key {
+        left: -560px;
+        top: -260px;
+        width: 1600px;
+        height: 1600px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255, 236, 214, 0.17) 0%, rgba(255, 236, 214, 0.05) 32%, rgba(255, 236, 214, 0) 62%);
+      }
+      #floor {
+        left: -200px;
+        top: 1500px;
+        width: 1480px;
+        height: 600px;
+        background: radial-gradient(50% 40% at 50% 30%, rgba(232, 116, 42, 0.07), rgba(232, 116, 42, 0) 70%);
+      }
+      #vignette {
+        inset: 0;
+        background: radial-gradient(90% 70% at 50% 45%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.6) 100%);
+      }
+      #grain {
+        left: -200px;
+        top: -200px;
+        width: 1480px;
+        height: 2320px;
+        opacity: 0.075;
+        mix-blend-mode: overlay;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1.6 -0.3'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>");
+      }
+      #flash {
+        left: -600px;
+        top: 0;
+        width: 700px;
+        height: 1920px;
+        background: linear-gradient(100deg, rgba(255, 240, 225, 0) 0%, rgba(255, 240, 225, 0.16) 50%, rgba(255, 240, 225, 0) 100%);
+        transform: skewX(-12deg);
+      }
+
+      /* ---------- products ---------- */
+      #stage {
+        inset: 0;
+        perspective: 1800px;
+      }
+      #polo-wrap {
+        left: 160px;
+        top: 820px;
+        width: 760px;
+        height: 855px;
+        transform-origin: 50% 50%;
+      }
+      #beanie-wrap {
+        left: 600px;
+        top: 1236px;
+        width: 400px;
+        height: 368px;
+        transform-origin: 50% 60%;
+      }
+      .prod {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        filter: drop-shadow(0 40px 50px rgba(0, 0, 0, 0.6));
+      }
+      .shadow {
+        position: absolute;
+        left: 12%;
+        width: 76%;
+        height: 70px;
+        bottom: -40px;
+        border-radius: 50%;
+        background: radial-gradient(closest-side, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+      }
+      .sweep {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(105deg, rgba(255, 240, 225, 0) 38%, rgba(255, 240, 225, 0.32) 50%, rgba(255, 240, 225, 0) 62%);
+        background-size: 300% 100%;
+        background-position: 100% 0;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+      }
+      #polo-sweep {
+        -webkit-mask-image: url("assets/polo-placeholder.svg");
+        mask-image: url("assets/polo-placeholder.svg");
+      }
+      #beanie-sweep {
+        -webkit-mask-image: url("assets/beanie-placeholder.svg");
+        mask-image: url("assets/beanie-placeholder.svg");
+      }
+
+      /* ---------- chrome ---------- */
+      .chrome {
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 500;
+        font-size: 26px;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: var(--off-dim);
+      }
+      #chrome-top {
+        left: 72px;
+        top: 92px;
+        width: 936px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #chrome-top b {
+        color: var(--off);
+        font-weight: 700;
+      }
+      #chrome-bot {
+        left: 72px;
+        top: 1846px;
+        width: 936px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #chrome-bar {
+        width: 120px;
+        height: 4px;
+        background: var(--orange);
+        transform-origin: right center;
+      }
+
+      /* ---------- S1 hook ---------- */
+      #s1-black {
+        top: 250px;
+        font-size: 300px;
+      }
+      #s1-friday {
+        top: 540px;
+        font-size: 300px;
+      }
+
+      /* ---------- S2 deal ---------- */
+      #s2-upto {
+        top: 252px;
+        font-size: 74px;
+        color: var(--orange);
+      }
+      #s2-pct {
+        top: 318px;
+        height: 1.2em;
+        display: flex;
+        justify-content: center;
+        font-size: 430px;
+        transform-origin: 50% 60%;
+      }
+      .roll {
+        height: 1.2em;
+        overflow: hidden;
+      }
+      .strip {
+        display: flex;
+        flex-direction: column;
+      }
+      .strip span,
+      .pct-sign .in {
+        display: block;
+        height: 1.2em;
+        line-height: 1.2em;
+      }
+      .pct-sign {
+        height: 1.2em;
+        overflow: hidden;
+        color: var(--orange);
+        margin-left: 0.02em;
+      }
+      #s2-off {
+        top: 790px;
+        font-size: 230px;
+        letter-spacing: 0.04em;
+      }
+
+      /* ---------- S3 gift ---------- */
+      #s3-free {
+        top: 372px;
+        font-size: 196px;
+        letter-spacing: 0.01em;
+        white-space: nowrap;
+      }
+      #s3-free .ch {
+        display: inline-block;
+        overflow: hidden;
+        vertical-align: top;
+      }
+      #s3-free .ch > span {
+        display: inline-block;
+      }
+      #s3-free .sp {
+        display: inline-block;
+        width: 0.22em;
+      }
+      #s3-with {
+        top: 598px;
+        font-size: 60px;
+        letter-spacing: 0.34em;
+        padding-left: 0.34em;
+      }
+      #s3-rule {
+        left: 480px;
+        top: 700px;
+        width: 120px;
+        height: 4px;
+        background: var(--orange);
+      }
+
+      /* ---------- S4 end frame ---------- */
+      #logo {
+        top: 168px;
+      }
+      #logo .mark {
+        font-size: 96px;
+        letter-spacing: 0.08em;
+        padding-left: 0.08em;
+      }
+      #logo .sub {
+        margin-top: 8px;
+        font-size: 26px;
+        letter-spacing: 0.6em;
+        padding-left: 0.6em;
+        color: var(--off-dim);
+      }
+      .ph {
+        display: var(--ph-tag);
+        margin-top: 10px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 16px;
+        letter-spacing: 0.3em;
+        color: #84858a;
+      }
+      #e-bf {
+        top: 372px;
+        font-size: 132px;
+        letter-spacing: 0.05em;
+        padding-left: 0.05em;
+      }
+      #e-upto {
+        top: 538px;
+        font-size: 50px;
+        color: var(--orange);
+        padding-left: 0.3em;
+      }
+      #e-off {
+        top: 590px;
+        font-size: 262px;
+        letter-spacing: 0.01em;
+        white-space: nowrap;
+        transform-origin: 50% 50%;
+      }
+      #e-gift {
+        top: 888px;
+        font-size: 46px;
+        letter-spacing: 0.14em;
+        white-space: nowrap;
+      }
+      #e-rule {
+        left: 470px;
+        top: 972px;
+        width: 140px;
+        height: 4px;
+        background: var(--orange);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="6" data-width="1080" data-height="1920">
+      <div id="key" class="abs"></div>
+      <div id="floor" class="abs"></div>
+      <div id="flash" class="abs"></div>
+
+      <!-- type that sits behind the product -->
+      <div id="s1-black" data-layout-allow-overflow data-layout-allow-overlap data-layout-allow-occlusion class="abs center anton mask"><span class="in">BLACK</span></div>
+      <div id="s1-friday" data-layout-allow-overflow data-layout-allow-overlap data-layout-allow-occlusion class="abs center anton mask"><span class="in">FRIDAY</span></div>
+
+      <div id="s2-upto" data-layout-allow-overflow data-layout-allow-overlap data-layout-allow-occlusion class="abs center label mask"><span class="in">UP TO</span></div>
+      <div id="s2-pct" data-layout-allow-overflow data-layout-allow-overlap data-layout-allow-occlusion class="abs center anton">
+        <div class="roll"><div class="strip" id="strip-a"><span>8</span><span>9</span><span>1</span><span>2</span><span>3</span></div></div>
+        <div class="roll"><div class="strip" id="strip-b"><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span></div></div>
+        <div class="pct-sign"><span class="in">%</span></div>
+      </div>
+
+      <!-- products -->
+      <div id="stage" class="abs">
+        <div id="polo-wrap" class="abs">
+          <div class="shadow"></div>
+          <img id="polo" class="prod" src="assets/polo-placeholder.svg" alt="UndrDog Project 008 polo, Midnight Black" />
+          <div id="polo-sweep" class="sweep"></div>
+        </div>
+        <div id="beanie-wrap" class="abs">
+          <div class="shadow"></div>
+          <img id="beanie" class="prod" src="assets/beanie-placeholder.svg" alt="UndrDog beanie" />
+          <div id="beanie-sweep" class="sweep"></div>
+        </div>
+      </div>
+
+      <!-- type that sits in front of the product -->
+      <div id="s2-off" data-layout-allow-overflow data-layout-allow-overlap data-layout-allow-occlusion class="abs center anton mask"><span class="in" data-layout-allow-occlusion>OFF</span></div>
+
+      <div id="s3-free" data-layout-allow-overflow data-layout-allow-overlap data-layout-allow-occlusion class="abs center anton"></div>
+      <div id="s3-with" data-layout-allow-overflow data-layout-allow-overlap data-layout-allow-occlusion class="abs center label mask"><span class="in">WITH EVERY ORDER</span></div>
+      <div id="s3-rule" class="abs"></div>
+
+      <div id="logo" class="abs center">
+        <div class="anton mark">UNDRDOG</div>
+        <div class="label sub">HEMP</div>
+        <div class="ph">LOGO PLACEHOLDER</div>
+      </div>
+      <div id="e-bf" data-layout-allow-overflow data-layout-allow-overlap data-layout-allow-occlusion class="abs center anton mask"><span class="in">BLACK FRIDAY</span></div>
+      <div id="e-upto" data-layout-allow-overflow data-layout-allow-overlap data-layout-allow-occlusion class="abs center label mask"><span class="in">UP TO</span></div>
+      <div id="e-off" data-layout-allow-overflow data-layout-allow-overlap data-layout-allow-occlusion class="abs center anton mask"><span class="in" data-layout-allow-occlusion>30<span class="c-orange" data-layout-allow-occlusion>%</span> OFF</span></div>
+      <div id="e-gift" data-layout-allow-overflow data-layout-allow-overlap data-layout-allow-occlusion class="abs center label mask"><span class="in" data-layout-allow-occlusion><span class="c-orange">+</span> FREE BEANIE WITH EVERY ORDER</span></div>
+      <div id="e-rule" class="abs"></div>
+
+      <div id="chrome-top" class="abs chrome"><span><b>UNDRDOG</b> HEMP</span><span>PROJECT 008 — THE POLO</span></div>
+      <div id="chrome-bot" class="abs chrome"><span>MIDNIGHT BLACK</span><span id="chrome-bar"></span></div>
+
+      <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="6" data-track-index="1" data-volume="0.9"></audio>
+
+      <div id="vignette" class="abs"></div>
+      <div id="grain" class="abs"></div>
+    </div>
+
+    <script>
+      // split "FREE BEANIE" into masked characters
+      const freeEl = document.getElementById("s3-free");
+      "FREE BEANIE".split("").forEach((c) => {
+        if (c === " ") {
+          const s = document.createElement("span");
+          s.className = "sp";
+          freeEl.appendChild(s);
+          return;
+        }
+        const m = document.createElement("span");
+        m.className = "ch";
+        const i = document.createElement("span");
+        i.textContent = c;
+        m.appendChild(i);
+        freeEl.appendChild(m);
+      });
+      const freeChars = freeEl.querySelectorAll(".ch > span");
+
+      const tl = gsap.timeline({ paused: true });
+      const IN = (sel) => document.querySelector(sel + " .in");
+
+      // ---------- initial states ----------
+      gsap.set([IN("#s1-black"), IN("#s1-friday"), IN("#s2-off"), IN("#e-bf"), IN("#e-off"), IN("#s3-with"), IN("#s2-upto")], { yPercent: 110 });
+      gsap.set([IN("#e-upto"), IN("#e-gift")], { yPercent: 110 });
+      gsap.set(".pct-sign .in", { xPercent: -110 });
+      gsap.set(["#strip-a", "#strip-b"], { yPercent: 0 });
+      gsap.set("#s2-pct", { opacity: 0 });
+      gsap.set(freeChars, { yPercent: 110 });
+      gsap.set(["#s3-rule", "#e-rule"], { scaleX: 0 });
+      gsap.set(["#logo", "#chrome-top", "#chrome-bot"], { opacity: 0 });
+      gsap.set("#chrome-bar", { scaleX: 0 });
+      gsap.set("#beanie-wrap", { opacity: 0, x: 520, rotation: 14 });
+      gsap.set("#flash", { x: 0, opacity: 0 });
+
+      // ---------- atmosphere (whole spot) ----------
+      tl.fromTo("#key", { x: -260, y: -120, opacity: 0.4 }, { x: 160, y: 40, opacity: 1, duration: 1.3, ease: "power2.out" }, 0);
+      tl.to("#key", { x: 260, y: 260, duration: 4.7, ease: "sine.inOut" }, 1.3);
+      tl.fromTo("#grain", { x: 0, y: 0 }, { x: -180, y: -140, duration: 6, ease: "steps(72)" }, 0);
+      tl.to("#chrome-bar", { scaleX: 1, duration: 5.8, ease: "none" }, 0.2);
+
+      // ---------- 0.0 - 1.2  THE HOOK ----------
+      tl.fromTo(
+        "#polo-wrap",
+        { scale: 0.84, y: 90, rotationY: -14 },
+        { scale: 1, y: 0, rotationY: -4, duration: 1.0, ease: "power3.out" },
+        0
+      );
+      tl.fromTo("#polo", { filter: "brightness(0.12) drop-shadow(0 40px 50px rgba(0,0,0,0.6))" }, { filter: "brightness(1) drop-shadow(0 40px 50px rgba(0,0,0,0.6))", duration: 0.9, ease: "power2.out" }, 0);
+      tl.to(IN("#s1-black"), { yPercent: 0, duration: 0.5, ease: "expo.out" }, 0.1);
+      tl.to(IN("#s1-friday"), { yPercent: 0, duration: 0.5, ease: "expo.out" }, 0.2);
+      tl.fromTo(["#s1-black", "#s1-friday"], { scale: 1.12 }, { scale: 1, duration: 0.88, ease: "power3.out" }, 0.1);
+      tl.to(["#chrome-top", "#chrome-bot"], { opacity: 1, duration: 0.4 }, 0.3);
+      tl.fromTo("#polo-sweep", { backgroundPosition: "100% 0" }, { backgroundPosition: "0% 0", duration: 0.75, ease: "power2.inOut" }, 0.42);
+
+      // ---------- speed ramp + light-sweep cut ----------
+      tl.to([IN("#s1-black"), IN("#s1-friday")], { yPercent: -110, duration: 0.22, ease: "expo.in", stagger: 0.04 }, 0.98);
+      tl.to("#polo-wrap", { scale: 1.26, y: -60, rotationY: 6, duration: 0.22, ease: "expo.in" }, 1.0);
+      tl.to("#polo", { filter: "brightness(1.15) blur(6px) drop-shadow(0 40px 50px rgba(0,0,0,0.6))", duration: 0.2, ease: "expo.in" }, 1.0);
+      tl.fromTo("#flash", { x: -100, opacity: 1 }, { x: 1900, opacity: 1, duration: 0.42, ease: "power2.inOut" }, 1.04);
+
+      // ---------- 1.2 - 3.3  THE MAIN DEAL ----------
+      tl.to("#polo-wrap", { scale: 0.82, y: 232, rotationY: -6, duration: 0.6, ease: "expo.out" }, 1.22);
+      tl.to("#polo", { filter: "brightness(1) blur(0px) drop-shadow(0 40px 50px rgba(0,0,0,0.6))", duration: 0.35, ease: "power2.out" }, 1.22);
+      tl.to("#polo-wrap", { rotationY: 5, scale: 0.85, duration: 1.28, ease: "sine.inOut" }, 1.82);
+      tl.to(IN("#s2-upto"), { yPercent: 0, duration: 0.4, ease: "expo.out" }, 1.26);
+      tl.set("#s2-pct", { opacity: 1 }, 1.3);
+      tl.fromTo("#s2-pct", { scale: 0.9 }, { scale: 1, duration: 0.66, ease: "expo.out" }, 1.3);
+      tl.fromTo("#strip-a", { yPercent: 0 }, { yPercent: -80, duration: 0.6, ease: "expo.out" }, 1.3);
+      tl.fromTo("#strip-b", { yPercent: 0 }, { yPercent: -80, duration: 0.6, ease: "expo.out" }, 1.38);
+      tl.to(".pct-sign .in", { xPercent: 0, duration: 0.42, ease: "expo.out" }, 1.56);
+      tl.to(IN("#s2-off"), { yPercent: 0, duration: 0.45, ease: "expo.out" }, 1.74);
+      // landing punch on 30%
+      tl.fromTo("#s2-pct", { scale: 1.07 }, { scale: 1, duration: 0.45, ease: "power4.out", immediateRender: false }, 1.98);
+      tl.to("#s2-pct", { scale: 1.02, duration: 0.85, ease: "sine.inOut" }, 2.43);
+      tl.fromTo("#polo-sweep", { backgroundPosition: "100% 0" }, { backgroundPosition: "0% 0", duration: 0.8, ease: "power2.inOut", immediateRender: false }, 2.3);
+
+      // ---------- 3.3 - 5.0  THE FREE GIFT ----------
+      tl.to([IN("#s2-upto"), "#strip-a", "#strip-b", ".pct-sign .in", IN("#s2-off")], {
+        yPercent: (i) => (i === 1 || i === 2 ? -100 : -110),
+        duration: 0.24,
+        ease: "expo.in",
+        stagger: 0.03,
+      }, 3.08);
+      tl.set("#s2-pct", { opacity: 0 }, 3.36);
+      tl.to("#polo-wrap", { x: -214, y: -10, scale: 0.66, rotationY: 10, duration: 0.62, ease: "power4.inOut" }, 3.12);
+      tl.to("#beanie-wrap", { opacity: 1, x: 0, rotation: 0, duration: 0.65, ease: "expo.out" }, 3.3);
+      tl.to(freeChars, { yPercent: 0, duration: 0.45, ease: "expo.out", stagger: 0.025 }, 3.4);
+      tl.to(IN("#s3-with"), { yPercent: 0, duration: 0.4, ease: "expo.out" }, 3.68);
+      tl.to("#s3-rule", { scaleX: 1, duration: 0.4, ease: "expo.out" }, 3.78);
+      tl.fromTo("#beanie-sweep", { backgroundPosition: "100% 0" }, { backgroundPosition: "0% 0", duration: 0.7, ease: "power2.inOut" }, 3.95);
+      tl.to("#beanie-wrap", { y: -12, duration: 0.9, ease: "sine.inOut" }, 3.95);
+      tl.to("#polo-wrap", { rotationY: 3, duration: 1.1, ease: "sine.inOut" }, 3.74);
+
+      // ---------- 5.0 - 6.0  BRANDED END FRAME ----------
+      tl.to([freeChars, IN("#s3-with")], { yPercent: -110, duration: 0.22, ease: "expo.in", stagger: 0.01 }, 4.78);
+      tl.to("#s3-rule", { scaleX: 0, duration: 0.2, ease: "expo.in" }, 4.84);
+      tl.to("#chrome-top", { opacity: 0, duration: 0.2 }, 4.86);
+      tl.to("#polo-wrap", { x: -176, y: 250, scale: 0.6, rotationY: 4, duration: 0.6, ease: "power4.inOut" }, 4.86);
+      tl.to("#beanie-wrap", { x: -10, y: 176, scale: 0.92, duration: 0.6, ease: "power4.inOut" }, 4.86);
+      tl.fromTo("#logo", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 5.0);
+      tl.to(IN("#e-bf"), { yPercent: 0, duration: 0.42, ease: "expo.out" }, 5.02);
+      tl.to(IN("#e-upto"), { yPercent: 0, duration: 0.4, ease: "expo.out" }, 5.08);
+      tl.to(IN("#e-off"), { yPercent: 0, duration: 0.45, ease: "expo.out" }, 5.1);
+      tl.fromTo("#e-off", { scale: 1.08 }, { scale: 1, duration: 0.6, ease: "power4.out" }, 5.1);
+      tl.to(IN("#e-gift"), { yPercent: 0, duration: 0.4, ease: "expo.out" }, 5.2);
+      tl.to("#e-rule", { scaleX: 1, duration: 0.4, ease: "expo.out" }, 5.28);
+      // hold: only a slow drift so the offer stays legible
+      tl.to("#polo-wrap", { scale: 0.61, duration: 0.54, ease: "none" }, 5.46);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
