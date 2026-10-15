@@ -6,12 +6,10 @@
     <script src="vendor/gsap.min.js"></script>
     <style>
       /*
-        ASSET SLOTS — the official UndrDog files could not be downloaded from this sandbox.
-        Swap these four paths for the official assets (transparent PNG cutouts work best):
-          assets/polo-placeholder.svg    -> Midnight Black polo, front, cutout   (img + 2 masks)
-          assets/beanie-placeholder.svg  -> official promotional beanie, cutout  (img + 1 mask)
-          #logo wordmark text            -> <img src="assets/logo.svg">
-        Hide the draft labels by setting --ph-tag: none.
+        ASSETS — polo.png and beanie.png are the client-supplied product photos, cut out
+        with scripts/cutout.py (sources: assets/*-source.jpg). The logo is still a
+        placeholder wordmark: replace the #logo text with <img src="assets/logo.svg">
+        and set --ph-tag: none to hide the draft label.
       */
       @font-face {
         font-family: "Anton";
@@ -152,7 +150,7 @@
         width: 100%;
         height: 100%;
         object-fit: contain;
-        filter: drop-shadow(0 40px 50px rgba(0, 0, 0, 0.6));
+        filter: brightness(1) blur(0px) drop-shadow(0 0 2px rgba(255,236,214,0.28)) drop-shadow(0 40px 50px rgba(0,0,0,0.6));
       }
       .shadow {
         position: absolute;
@@ -163,10 +161,15 @@
         border-radius: 50%;
         background: radial-gradient(closest-side, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
       }
+      .halo {
+        position: absolute;
+        inset: -14%;
+        background: radial-gradient(closest-side, rgba(255, 236, 214, 0.13), rgba(255, 236, 214, 0.04) 60%, rgba(255, 236, 214, 0) 100%);
+      }
       .sweep {
         position: absolute;
         inset: 0;
-        background: linear-gradient(105deg, rgba(255, 240, 225, 0) 38%, rgba(255, 240, 225, 0.32) 50%, rgba(255, 240, 225, 0) 62%);
+        background: linear-gradient(105deg, rgba(255, 240, 225, 0) 43%, rgba(255, 240, 225, 0.13) 50%, rgba(255, 240, 225, 0) 57%);
         background-size: 300% 100%;
         background-position: 100% 0;
         -webkit-mask-size: contain;
@@ -177,12 +180,12 @@
         mask-position: center;
       }
       #polo-sweep {
-        -webkit-mask-image: url("assets/polo-placeholder.svg");
-        mask-image: url("assets/polo-placeholder.svg");
+        -webkit-mask-image: url("assets/polo.png");
+        mask-image: url("assets/polo.png");
       }
       #beanie-sweep {
-        -webkit-mask-image: url("assets/beanie-placeholder.svg");
-        mask-image: url("assets/beanie-placeholder.svg");
+        -webkit-mask-image: url("assets/beanie.png");
+        mask-image: url("assets/beanie.png");
       }
 
       /* ---------- chrome ---------- */
@@ -382,13 +385,15 @@
       <!-- products -->
       <div id="stage" class="abs">
         <div id="polo-wrap" class="abs">
+          <div class="halo"></div>
           <div class="shadow"></div>
-          <img id="polo" class="prod" src="assets/polo-placeholder.svg" alt="UndrDog Project 008 polo, Midnight Black" />
+          <img id="polo" class="prod" src="assets/polo.png" alt="UndrDog Project 008 polo, Midnight Black" />
           <div id="polo-sweep" class="sweep"></div>
         </div>
         <div id="beanie-wrap" class="abs">
+          <div class="halo"></div>
           <div class="shadow"></div>
-          <img id="beanie" class="prod" src="assets/beanie-placeholder.svg" alt="UndrDog beanie" />
+          <img id="beanie" class="prod" src="assets/beanie.png" alt="UndrDog beanie" />
           <div id="beanie-sweep" class="sweep"></div>
         </div>
       </div>
@@ -468,7 +473,7 @@
         { scale: 1, y: 0, rotationY: -4, duration: 1.0, ease: "power3.out" },
         0
       );
-      tl.fromTo("#polo", { filter: "brightness(0.12) drop-shadow(0 40px 50px rgba(0,0,0,0.6))" }, { filter: "brightness(1) drop-shadow(0 40px 50px rgba(0,0,0,0.6))", duration: 0.9, ease: "power2.out" }, 0);
+      tl.fromTo("#polo", { filter: "brightness(0.12) blur(0px) drop-shadow(0 0 2px rgba(255,236,214,0.28)) drop-shadow(0 40px 50px rgba(0,0,0,0.6))" }, { filter: "brightness(1) blur(0px) drop-shadow(0 0 2px rgba(255,236,214,0.28)) drop-shadow(0 40px 50px rgba(0,0,0,0.6))", duration: 0.9, ease: "power2.out" }, 0);
       tl.to(IN("#s1-black"), { yPercent: 0, duration: 0.5, ease: "expo.out" }, 0.1);
       tl.to(IN("#s1-friday"), { yPercent: 0, duration: 0.5, ease: "expo.out" }, 0.2);
       tl.fromTo(["#s1-black", "#s1-friday"], { scale: 1.12 }, { scale: 1, duration: 0.88, ease: "power3.out" }, 0.1);
@@ -478,12 +483,12 @@
       // ---------- speed ramp + light-sweep cut ----------
       tl.to([IN("#s1-black"), IN("#s1-friday")], { yPercent: -110, duration: 0.22, ease: "expo.in", stagger: 0.04 }, 0.98);
       tl.to("#polo-wrap", { scale: 1.26, y: -60, rotationY: 6, duration: 0.22, ease: "expo.in" }, 1.0);
-      tl.to("#polo", { filter: "brightness(1.15) blur(6px) drop-shadow(0 40px 50px rgba(0,0,0,0.6))", duration: 0.2, ease: "expo.in" }, 1.0);
+      tl.to("#polo", { filter: "brightness(1.15) blur(6px) drop-shadow(0 0 2px rgba(255,236,214,0.28)) drop-shadow(0 40px 50px rgba(0,0,0,0.6))", duration: 0.2, ease: "expo.in" }, 1.0);
       tl.fromTo("#flash", { x: -100, opacity: 1 }, { x: 1900, opacity: 1, duration: 0.42, ease: "power2.inOut" }, 1.04);
 
       // ---------- 1.2 - 3.3  THE MAIN DEAL ----------
       tl.to("#polo-wrap", { scale: 0.82, y: 232, rotationY: -6, duration: 0.6, ease: "expo.out" }, 1.22);
-      tl.to("#polo", { filter: "brightness(1) blur(0px) drop-shadow(0 40px 50px rgba(0,0,0,0.6))", duration: 0.35, ease: "power2.out" }, 1.22);
+      tl.to("#polo", { filter: "brightness(1) blur(0px) drop-shadow(0 0 2px rgba(255,236,214,0.28)) drop-shadow(0 40px 50px rgba(0,0,0,0.6))", duration: 0.35, ease: "power2.out" }, 1.22);
       tl.to("#polo-wrap", { rotationY: 5, scale: 0.85, duration: 1.28, ease: "sine.inOut" }, 1.82);
       tl.to(IN("#s2-upto"), { yPercent: 0, duration: 0.4, ease: "expo.out" }, 1.26);
       tl.set("#s2-pct", { opacity: 1 }, 1.3);

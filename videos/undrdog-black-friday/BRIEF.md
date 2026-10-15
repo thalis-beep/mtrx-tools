@@ -17,9 +17,9 @@ Black / charcoal / off-white with restrained orange; Anton (condensed display) +
 3.3–5.0 gift: polo slides left, beanie lands right, FREE BEANIE / WITH EVERY ORDER.
 5.0–6.0 end frame: logo, BLACK FRIDAY, UP TO 30% OFF, + FREE BEANIE WITH EVERY ORDER, products; hold.
 
-## Assets still needed (the sandbox could not reach undrdog.com)
-The render uses neutral, clearly labelled placeholders. Drop in the official files and re-render:
-- Midnight Black polo, front, transparent PNG -> replace `assets/polo-placeholder.svg` (img src + `#polo-sweep` mask)
-- Official promotional beanie, transparent PNG -> replace `assets/beanie-placeholder.svg` (img src + `#beanie-sweep` mask)
-- Official UndrDog logo (SVG/PNG) -> replace the `#logo` wordmark text with an `<img>`
-Then set `--ph-tag: none` and run `npm run check && npm run render`.
+## Assets
+- `assets/polo.png`, `assets/beanie.png`: client-supplied product photos (`assets/*-source.jpg`),
+  cut out with `scripts/cutout.py` (luminance matte + background un-mix; beanie run with a 2px choke
+  to drop the studio contact shadow). Original pixels, nothing redrawn.
+- Still needed: the official UndrDog logo (SVG/PNG). Replace the `#logo` wordmark text with an `<img>`,
+  set `--ph-tag: none`, then `npm run check && npm run render`.
