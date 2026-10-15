@@ -6,7 +6,9 @@
     <script src="vendor/gsap.min.js"></script>
     <style>
       /*
-        Minimal, poster-style cut. Every line of the offer is on screen by ~0.9s and
+        Minimal, poster-style cut. All information sits inside the centred 4:5 safe zone
+        (1080x1350, y 285-1635); only background colour bleeds into the 9:16 edges.
+        Every line of the offer is on screen by ~0.9s and
         stays put; after that only the product breathes (slow push-in + one sheen).
         polo.png / beanie.png: client product photos cut out with scripts/cutout.py.
         #logo is a placeholder wordmark until the official logo file is supplied.
@@ -84,19 +86,19 @@
         left: 0;
         top: 0;
         width: 1080px;
-        height: 400px;
+        height: 560px;
         background: var(--black);
       }
       #logo {
-        top: 76px;
-        font-size: 44px;
+        top: 318px;
+        font-size: 38px;
         letter-spacing: 0.16em;
         padding-left: 0.16em;
         color: var(--off);
       }
       #bf {
-        top: 170px;
-        font-size: 170px;
+        top: 384px;
+        font-size: 138px;
         letter-spacing: 0.02em;
         padding-left: 0.02em;
         color: var(--off);
@@ -104,31 +106,31 @@
 
       /* ---------- offer ---------- */
       #upto {
-        top: 450px;
-        font-size: 50px;
+        top: 588px;
+        font-size: 40px;
         letter-spacing: 0.32em;
         padding-left: 0.32em;
         color: var(--orange);
       }
       #off {
-        top: 506px;
-        font-size: 272px;
+        top: 632px;
+        font-size: 216px;
         letter-spacing: 0.01em;
       }
 
       /* ---------- product ---------- */
       #polo-wrap {
-        left: 236px;
-        top: 812px;
-        width: 608px;
-        height: 760px;
+        left: 326px;
+        top: 856px;
+        width: 428px;
+        height: 534px;
         transform-origin: 50% 55%;
       }
       #polo-shadow {
-        left: 250px;
-        top: 1540px;
-        width: 580px;
-        height: 70px;
+        left: 340px;
+        top: 1364px;
+        width: 400px;
+        height: 50px;
         border-radius: 50%;
         background: radial-gradient(closest-side, rgba(40, 30, 20, 0.28), rgba(40, 30, 20, 0));
       }
@@ -163,40 +165,40 @@
 
       /* ---------- free beanie card ---------- */
       #card {
-        left: 90px;
-        top: 1626px;
-        width: 900px;
-        height: 180px;
-        border-radius: 28px;
+        left: 130px;
+        top: 1418px;
+        width: 820px;
+        height: 134px;
+        border-radius: 24px;
         background: var(--card);
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 40px;
+        gap: 32px;
         padding-right: 20px;
       }
       #beanie-wrap {
         position: relative;
-        width: 144px;
-        height: 144px;
+        width: 108px;
+        height: 108px;
       }
       #card-text {
         position: relative;
       }
       #gift {
-        font-size: 80px;
+        font-size: 60px;
         letter-spacing: 0.01em;
       }
       #gift-sub {
-        margin-top: 8px;
-        font-size: 34px;
+        margin-top: 6px;
+        font-size: 26px;
         letter-spacing: 0.26em;
         color: var(--ink-soft);
       }
 
       #footer {
-        top: 1846px;
-        font-size: 24px;
+        top: 1566px;
+        font-size: 20px;
         font-weight: 500;
         letter-spacing: 0.32em;
         padding-left: 0.32em;

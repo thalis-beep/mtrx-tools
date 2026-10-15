@@ -17,6 +17,12 @@ largest element; the polo centred; a FREE BEANIE WITH EVERY ORDER card with the 
 Motion: everything settles in once (all copy readable by ~0.9s), then only a slow push-in on the polo
 and one soft sheen each on the polo and the beanie. Nothing leaves the screen.
 
+## Safe zones
+All information sits inside the centred 4:5 zone (1080x1350, y 285-1635), within 60 px side
+margins, and clear of the approximate action rail (x > 960) and caption area (y > 1600).
+Only background colour bleeds to the 9:16 edges. Check with `../../overlays/safe-zone-9x16-4x5.png`;
+`renders/*-safezone-preview.mp4` is the spot with that overlay burned in (review only, not for posting).
+
 ## Assets
 - `assets/polo.png`: client polo reference (`assets/polo-source.jpg`) cut out with `scripts/cutout.py`.
 - `assets/beanie.png`: client beanie, same cutout as the first spot.
