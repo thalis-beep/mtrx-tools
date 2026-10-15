@@ -9,7 +9,7 @@
         Minimal, poster-style cut. All information sits inside the centred 4:5 safe zone
         (1080x1350, y 285-1635); only background colour bleeds into the 9:16 edges.
         Every line of the offer is on screen by ~0.9s and
-        stays put; after that only the product breathes (slow push-in + one sheen).
+        stays put on a dark charcoal set; after that only the product breathes (slow push-in + one sheen).
         polo.png / beanie.png: client product photos cut out with scripts/cutout.py.
         #logo is a placeholder wordmark until the official logo file is supplied.
       */
@@ -29,12 +29,12 @@
         font-weight: 700;
       }
       :root {
-        --black: #0d0d0e;
+        --black: #0b0b0c;
+        --char: #17171a;
         --off: #efebe3;
-        --stage: #ece8e1;
-        --card: #dfd9cf;
-        --ink-soft: #5b5850;
-        --orange: #bb4e15;
+        --off-dim: rgba(239, 235, 227, 0.62);
+        --orange: #e8742a;
+        --light: 255, 236, 214;
       }
       * {
         margin: 0;
@@ -46,15 +46,15 @@
         width: 1080px;
         height: 1920px;
         overflow: hidden;
-        background: var(--stage);
+        background: var(--black);
       }
       #root {
         position: relative;
         width: 100%;
         height: 100%;
         overflow: hidden;
-        background: radial-gradient(70% 45% at 50% 62%, #f6f3ee 0%, var(--stage) 60%, #e3ded5 100%);
-        color: var(--black);
+        background: radial-gradient(120% 80% at 50% 38%, #1d1d21 0%, var(--char) 45%, var(--black) 100%);
+        color: var(--off);
         font-family: "Barlow Condensed", sans-serif;
       }
       .abs {
@@ -81,13 +81,24 @@
         color: var(--orange);
       }
 
-      /* ---------- black header band ---------- */
-      #band {
-        left: 0;
-        top: 0;
-        width: 1080px;
-        height: 560px;
-        background: var(--black);
+      /* ---------- atmosphere: dark set, the polo carries the light ---------- */
+      #spot {
+        left: -100px;
+        top: 560px;
+        width: 1280px;
+        height: 1180px;
+        background: radial-gradient(closest-side, rgba(var(--light), 0.25), rgba(var(--light), 0.08) 50%, rgba(var(--light), 0) 100%);
+      }
+      #vignette {
+        inset: 0;
+        background: radial-gradient(90% 70% at 50% 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.55) 100%);
+      }
+      #bf-rule {
+        left: 480px;
+        top: 540px;
+        width: 120px;
+        height: 4px;
+        background: var(--orange);
       }
       #logo {
         top: 318px;
@@ -132,7 +143,7 @@
         width: 400px;
         height: 50px;
         border-radius: 50%;
-        background: radial-gradient(closest-side, rgba(40, 30, 20, 0.28), rgba(40, 30, 20, 0));
+        background: radial-gradient(closest-side, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
       }
       .prod {
         position: absolute;
@@ -140,6 +151,8 @@
         width: 100%;
         height: 100%;
         object-fit: contain;
+        /* thin rim light so the black garment separates from the dark set */
+        filter: drop-shadow(0 0 2px rgba(var(--light), 0.3)) drop-shadow(0 30px 40px rgba(0, 0, 0, 0.6));
       }
       .sheen {
         position: absolute;
@@ -170,7 +183,8 @@
         width: 820px;
         height: 134px;
         border-radius: 24px;
-        background: var(--card);
+        background: rgba(var(--light), 0.05);
+        border: 1px solid rgba(var(--light), 0.12);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -181,6 +195,11 @@
         position: relative;
         width: 108px;
         height: 108px;
+      }
+      #beanie-halo {
+        position: absolute;
+        inset: -30%;
+        background: radial-gradient(closest-side, rgba(var(--light), 0.24), rgba(var(--light), 0));
       }
       #card-text {
         position: relative;
@@ -193,7 +212,7 @@
         margin-top: 6px;
         font-size: 26px;
         letter-spacing: 0.26em;
-        color: var(--ink-soft);
+        color: var(--off-dim);
       }
 
       #footer {
@@ -202,15 +221,16 @@
         font-weight: 500;
         letter-spacing: 0.32em;
         padding-left: 0.32em;
-        color: var(--ink-soft);
+        color: var(--off-dim);
       }
     </style>
   </head>
   <body>
     <div id="root" data-composition-id="main" data-start="0" data-duration="6" data-width="1080" data-height="1920">
-      <div id="band" class="abs"></div>
+      <div id="spot" class="abs"></div>
       <div id="logo" class="abs center anton">UNDRDOG</div>
       <div id="bf" class="abs center anton">BLACK FRIDAY</div>
+      <div id="bf-rule" class="abs"></div>
 
       <div id="upto" class="abs center label">UP TO</div>
       <div id="off" class="abs center anton">30<span class="c-orange">%</span> OFF</div>
@@ -223,6 +243,7 @@
 
       <div id="card" class="abs">
         <div id="beanie-wrap">
+          <div id="beanie-halo"></div>
           <img id="beanie" class="prod" src="assets/beanie.png" alt="UndrDog beanie" />
           <div id="beanie-sheen" class="sheen"></div>
         </div>
@@ -233,6 +254,8 @@
       </div>
 
       <div id="footer" class="abs center label">PROJECT 008 — THE POLO · MIDNIGHT BLACK</div>
+
+      <div id="vignette" class="abs"></div>
 
       <audio id="sfx" src="assets/sfx.wav" data-start="0" data-duration="6" data-track-index="1" data-volume="0.8"></audio>
     </div>
@@ -245,6 +268,8 @@
         tl.fromTo(sel, { opacity: 0, y: dy }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, t);
       rise("#logo", 0.0, 12);
       rise("#bf", 0.06);
+      tl.fromTo("#bf-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, 0.14);
+      tl.fromTo("#spot", { opacity: 0 }, { opacity: 1, duration: 0.9, ease: "power2.out" }, 0.2);
       rise("#upto", 0.16);
       rise("#off", 0.22);
       tl.fromTo("#polo-wrap", { opacity: 0, scale: 0.96 }, { opacity: 1, scale: 1, duration: 0.7, ease: "power3.out" }, 0.3);
