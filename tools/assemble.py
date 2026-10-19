@@ -123,10 +123,11 @@ def main(edit_path, out_dir):
     for v in edit["video"]:
         src = base / v["file"]
         conformed = media / (Path(v["file"]).stem + ".mp4")
-        run(["ffmpeg", "-v", "error", "-y", "-i", str(src), "-an",
-             "-vf", f"setpts=PTS/{v.get('speed', 1.0)},scale={w}:{h}:force_original_aspect_ratio=increase,"
-                    f"crop={w}:{h},fps={fps}",
-             "-c:v", "libx264", "-crf", "16", "-preset", "medium", "-pix_fmt", "yuv420p", str(conformed)])
+        if not (conformed.exists() and conformed.stat().st_mtime >= src.stat().st_mtime):
+            run(["ffmpeg", "-v", "error", "-y", "-i", str(src), "-an",
+                 "-vf", f"setpts=PTS/{v.get('speed', 1.0)},scale={w}:{h}:force_original_aspect_ratio=increase,"
+                        f"crop={w}:{h},fps={fps}",
+                 "-c:v", "libx264", "-crf", "16", "-preset", "medium", "-pix_fmt", "yuv420p", str(conformed)])
         length = v["src_out"] - v["src_in"]
         xml_video.append({"file": conformed.name, "src_in": v["src_in"], "src_out": v["src_out"],
                           "start": t, "src_duration": probe_duration(conformed),
@@ -157,10 +158,15 @@ def main(edit_path, out_dir):
     write_ass(ass, chunks, edit.get("title"), w, h, edit.get("callouts", []))
 
     # Preview render: hard cuts, captions and title burned in, song underneath.
-    inputs, parts = [], []
+    # Cut on exact frame boundaries of the timeline so rounding never accumulates
+    # and the picture stays locked to the song.
+    inputs, parts, t = [], [], 0.0
     for i, (f, s_in, length) in enumerate(cuts):
-        inputs += ["-ss", f"{s_in:.3f}", "-t", f"{length:.3f}", "-i", str(f)]
-        parts.append(f"[{i}:v]setpts=PTS-STARTPTS[v{i}]")
+        n_frames = round((t + length) * fps) - round(t * fps)
+        first = round(s_in * fps)
+        t += length
+        inputs += ["-i", str(f)]
+        parts.append(f"[{i}:v]trim=start_frame={first}:end_frame={first + n_frames},setpts=PTS-STARTPTS[v{i}]")
     n = len(cuts)
     sub = str(ass).replace(":", r"\:")
     graph = ";".join(parts) + ";" + "".join(f"[v{i}]" for i in range(n)) + \

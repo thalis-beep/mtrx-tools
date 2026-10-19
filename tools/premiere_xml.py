@@ -53,11 +53,11 @@ def clipitem(cid, item, fps, w, h, media_dir, kind, emitted):
     name = item["file"]
     src_dur = frames(item.get("src_duration", item["src_out"]), fps)
     start = frames(item["start"], fps)
-    end = start + frames(item["src_out"] - item["src_in"], fps)
+    end = frames(item["start"] + item["src_out"] - item["src_in"], fps)
     fid = "file-" + Path(name).stem
     return (f'<clipitem id="{cid}"><name>{escape(name)}</name><enabled>TRUE</enabled>'
             f"<duration>{src_dur}</duration>{rate(fps)}<start>{start}</start><end>{end}</end>"
-            f"<in>{frames(item['src_in'], fps)}</in><out>{frames(item['src_out'], fps)}</out>"
+            f"<in>{frames(item['src_in'], fps)}</in><out>{frames(item['src_in'], fps) + end - start}</out>"
             f"{file_el(fid, name, media_dir, src_dur, fps, w, h, kind, emitted)}"
             + ("<sourcetrack><mediatype>audio</mediatype><trackindex>1</trackindex></sourcetrack>"
                if kind == "audio" else "")
