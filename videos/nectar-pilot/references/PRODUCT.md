@@ -23,6 +23,9 @@ Use these details in every prompt that shows the product, and attach
 - Always attach the stick references when sticks are in shot; edit the frame rather
   than regenerating the scene (approved end-card fix: job 0531b652-040a-45c4-a0fe-7707d15e0502)
 
+## Powder
+- Soft, fine WHITE powder (regular creatine) that dissolves clean: water stays clear. Never pink/colored.
+
 ## Style notes
 - In stylized/cartoon scenes keep the pouch shape, colors and the "Nectar" logo legible;
   small print can be simplified.
