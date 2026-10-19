@@ -1,0 +1,281 @@
+{
+ "name": "Nectar Alive Again",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "video": [
+  {
+   "file": "clips/full/shot01.mp4",
+   "src_in": 0.1,
+   "src_out": 3.188
+  },
+  {
+   "file": "clips/full/shot02.mp4",
+   "src_in": 0.1,
+   "src_out": 4.192
+  },
+  {
+   "file": "clips/full/shot03.mp4",
+   "src_in": 0.1,
+   "src_out": 3.88
+  },
+  {
+   "file": "clips/full/shot04.mp4",
+   "src_in": 0.1,
+   "src_out": 5.092
+  },
+  {
+   "file": "clips/full/shot05.mp4",
+   "src_in": 0.1,
+   "src_out": 5.092
+  },
+  {
+   "file": "clips/full/shot06.mp4",
+   "src_in": 0.1,
+   "src_out": 2.237
+  },
+  {
+   "file": "clips/full/shot07.mp4",
+   "src_in": 0.1,
+   "src_out": 4.395
+  },
+  {
+   "file": "clips/full/shot08.mp4",
+   "src_in": 0.1,
+   "src_out": 4.396
+  },
+  {
+   "file": "clips/full/shot09.mp4",
+   "src_in": 0.1,
+   "src_out": 4.372
+  },
+  {
+   "file": "clips/full/shot10.mp4",
+   "src_in": 0.1,
+   "src_out": 1.54
+  },
+  {
+   "file": "clips/full/shot11.mp4",
+   "src_in": 0.1,
+   "src_out": 5.092
+  },
+  {
+   "file": "clips/full/shot12.mp4",
+   "src_in": 0.1,
+   "src_out": 2.956
+  },
+  {
+   "file": "clips/full/shot13.mp4",
+   "src_in": 0.1,
+   "src_out": 5.093
+  },
+  {
+   "file": "clips/full/shot14.mp4",
+   "src_in": 0.1,
+   "src_out": 2.956
+  },
+  {
+   "file": "clips/full/shot15.mp4",
+   "src_in": 0.1,
+   "src_out": 3.699
+  },
+  {
+   "file": "clips/full/shot16.mp4",
+   "src_in": 0.1,
+   "src_out": 7.72
+  },
+  {
+   "file": "clips/full/shot17.mp4",
+   "src_in": 0.1,
+   "src_out": 6.017
+  },
+  {
+   "file": "clips/full/shot18.mp4",
+   "src_in": 0.1,
+   "src_out": 5.116
+  },
+  {
+   "file": "clips/full/shot19.mp4",
+   "src_in": 0.1,
+   "src_out": 2.687
+  },
+  {
+   "file": "clips/full/shot20.mp4",
+   "src_in": 0.1,
+   "src_out": 3.225
+  },
+  {
+   "file": "clips/full/shot21.mp4",
+   "src_in": 0.1,
+   "src_out": 3.676
+  },
+  {
+   "file": "clips/full/shot22.mp4",
+   "src_in": 0.1,
+   "src_out": 1.979
+  },
+  {
+   "file": "clips/full/shot23.mp4",
+   "src_in": 0.1,
+   "src_out": 1.797
+  },
+  {
+   "file": "clips/full/shot24.mp4",
+   "src_in": 0.1,
+   "src_out": 4.395
+  },
+  {
+   "file": "clips/full/shot25.mp4",
+   "src_in": 0.1,
+   "src_out": 3.653
+  },
+  {
+   "file": "clips/full/shot26.mp4",
+   "src_in": 0.1,
+   "src_out": 4.396
+  },
+  {
+   "file": "clips/full/shot27.mp4",
+   "src_in": 0.1,
+   "src_out": 5.092
+  },
+  {
+   "file": "clips/full/shot28.mp4",
+   "src_in": 0.1,
+   "src_out": 5.812
+  },
+  {
+   "file": "clips/full/shot29.mp4",
+   "src_in": 0.1,
+   "src_out": 3.676
+  },
+  {
+   "file": "clips/full/shot30.mp4",
+   "src_in": 0.1,
+   "src_out": 3.676
+  },
+  {
+   "file": "clips/full/shot31.mp4",
+   "src_in": 0.1,
+   "src_out": 2.956
+  },
+  {
+   "file": "clips/full/shot32.mp4",
+   "src_in": 0.1,
+   "src_out": 2.956
+  },
+  {
+   "file": "clips/full/shot33.mp4",
+   "src_in": 0.1,
+   "src_out": 4.395
+  },
+  {
+   "file": "clips/full/shot34.mp4",
+   "src_in": 0.1,
+   "src_out": 2.933
+  },
+  {
+   "file": "clips/full/shot35.mp4",
+   "src_in": 0.1,
+   "src_out": 2.98
+  },
+  {
+   "file": "clips/full/shot36.mp4",
+   "src_in": 0.1,
+   "src_out": 4.883
+  },
+  {
+   "file": "clips/full/shot37.mp4",
+   "src_in": 0.1,
+   "src_out": 3.165
+  },
+  {
+   "file": "clips/full/shot38.mp4",
+   "src_in": 0.1,
+   "src_out": 3.676
+  },
+  {
+   "file": "clips/full/shot39.mp4",
+   "src_in": 0.1,
+   "src_out": 6.555
+  },
+  {
+   "file": "clips/full/shot40.mp4",
+   "src_in": 0.1,
+   "src_out": 3.653
+  },
+  {
+   "file": "clips/full/shot41.mp4",
+   "src_in": 0.1,
+   "src_out": 5.162
+  },
+  {
+   "file": "clips/full/shot42.mp4",
+   "src_in": 0.1,
+   "src_out": 2.979
+  },
+  {
+   "file": "clips/full/shot43.mp4",
+   "src_in": 0.1,
+   "src_out": 4.488
+  },
+  {
+   "file": "clips/full/shot44.mp4",
+   "src_in": 0.1,
+   "src_out": 3.442
+  },
+  {
+   "file": "clips/full/shot45.mp4",
+   "src_in": 0.1,
+   "src_out": 4.003
+  },
+  {
+   "file": "clips/full/shot46.mp4",
+   "src_in": 0.1,
+   "src_out": 4.442
+  },
+  {
+   "file": "clips/full/shot47.mp4",
+   "src_in": 0.0,
+   "src_out": 15.739,
+   "speed": 0.617
+  }
+ ],
+ "audio": {
+  "file": "audio/alive-again.mp3",
+  "src_in": 0.0
+ },
+ "words": "audio/words.json",
+ "captions_until": 179.2,
+ "callouts": [
+  {
+   "text": "ZERO SUGAR",
+   "start": 97.3,
+   "end": 100.2,
+   "y": 0.22
+  },
+  {
+   "text": "ZERO CALORIES",
+   "start": 99.1,
+   "end": 100.2,
+   "y": 0.3
+  },
+  {
+   "text": "NON-GMO",
+   "start": 100.9,
+   "end": 105.2,
+   "y": 0.22
+  },
+  {
+   "text": "BIOPERINE\\N{\\fs44}bioavailability enhancer",
+   "start": 103.8,
+   "end": 105.2,
+   "y": 0.32
+  }
+ ],
+ "title": {
+  "text": "Nectar Creatine\nFor men who want a change.",
+  "start": 179.4,
+  "end": 194.9
+ }
+}
