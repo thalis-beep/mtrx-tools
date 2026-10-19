@@ -23,7 +23,8 @@ onset_env = librosa.onset.onset_strength(y=y, sr=sr)
      "beats": [round(float(b), 3) for b in beats]}, indent=1))
 
 model = WhisperModel(model_name, device="cpu", compute_type="int8")
-segments, _ = model.transcribe(song, language="en", word_timestamps=True, vad_filter=False,
+audio16 = librosa.load(song, sr=16000, mono=True)[0]
+segments, _ = model.transcribe(audio16, language="en", word_timestamps=True, vad_filter=False,
                                beam_size=5, condition_on_previous_text=True)
 words = []
 for seg in segments:
