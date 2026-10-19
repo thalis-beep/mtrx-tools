@@ -1,0 +1,15 @@
+{
+  "name": "Nectar pilot",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "video": [
+    {"file": "clips/shot01.mp4", "src_in": 0.3, "src_out": 4.5},
+    {"file": "clips/shot02.mp4", "src_in": 0.4, "src_out": 3.4},
+    {"file": "clips/shot03.mp4", "src_in": 0.2, "src_out": 3.2},
+    {"file": "clips/shot04.mp4", "src_in": 0.4, "src_out": 4.2},
+    {"file": "clips/shot05.mp4", "src_in": 0.4, "src_out": 3.2},
+    {"file": "clips/shot06.mp4", "src_in": 0.2, "src_out": 3.4}
+  ],
+  "title": {"text": "Nectar Creatine\nFor men who want a change.", "start": 17.0, "end": 20.0}
+}
