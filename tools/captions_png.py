@@ -11,7 +11,9 @@ positions.json (optional): [{"start": s, "end": e, "y": 0.5}] overrides the capt
 height for shots where the default would cover a face.
 phrases.txt (optional): one caption per line, in lyric order. Each line takes its words from
 words.json and must match them exactly, so no word can go missing or change; without it the
-captions are grouped automatically.
+captions are grouped automatically. A line may start with a fill colour ("#3DFF3D is non-GMO,")
+to highlight a key phrase, or with "~" to skip the caption where a callout shows the same words.
+Each caption stays up until the next one starts, so the screen never goes blank mid-song.
 """
 import argparse
 import json
@@ -26,6 +28,7 @@ SIZE = 68          # matches the reference: caption ~70% of frame width for 3 wo
 STROKE = 8
 TRACKING = -3      # reference letters sit tight together
 MAX_WIDTH = 900    # stays inside the 4:5 safe zone with margin
+WHITE = (255, 255, 255, 255)
 # words a caption should not end on, so phrases stay together ("and still have")
 WEAK_END = {"a", "an", "the", "and", "or", "to", "of", "in", "on", "my", "his", "her", "your",
             "i", "i'd", "i'm", "with", "for", "at", "that", "who", "so", "just", "is", "was",
@@ -54,19 +57,25 @@ def chunk(words, max_words=3, gap=0.3):
 def from_phrases(words, lines):
     groups, i = [], 0
     for line in lines:
+        fill, skip = WHITE, line.startswith("~")
+        if skip:
+            line = line[1:].strip()
+        elif re.match(r"#[0-9A-Fa-f]{6}\s", line):
+            fill = tuple(int(line[k:k + 2], 16) for k in (1, 3, 5)) + (255,)
+            line = line[8:].strip()
         n = len(line.split())
         got = words[i:i + n]
         if [clean(t) for t in line.split()] != [clean(w["word"]) for w in got]:
             raise SystemExit(f"phrase {line!r} does not match sung words "
                              f"{' '.join(w['word'] for w in got)!r} at {words[i]['start']:.2f}s")
-        groups.append((line, got))
+        groups.append((line, got, fill, skip))
         i += n
     if i != len(words):
         raise SystemExit(f"{len(words) - i} sung words not covered, from {words[i]['word']!r}")
     return groups
 
 
-def render(text, y_frac, path, font):
+def render(text, y_frac, path, font, fill=None):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     size = SIZE
@@ -88,7 +97,7 @@ def render(text, y_frac, path, font):
                 d.text((cx, y), ch, font=f, fill=(0, 0, 0, 255), stroke_width=STROKE,
                        stroke_fill=(0, 0, 0, 255))
             else:
-                d.text((cx, y), ch, font=f, fill=(255, 255, 255, 255))
+                d.text((cx, y), ch, font=f, fill=fill or WHITE)
             cx += adv
     img.save(path)
 
@@ -113,16 +122,18 @@ def main():
         lines = [x.strip() for x in Path(a.phrases).read_text().splitlines() if x.strip()]
         groups = from_phrases(words, lines)
     else:
-        groups = [(" ".join(w["word"] for w in g), g) for g in chunk(words)]
-    for i, (line, g) in enumerate(groups):
+        groups = [(" ".join(w["word"] for w in g), g, WHITE, False) for g in chunk(words)]
+    for i, (line, g, fill, skip) in enumerate(groups):
+        if skip:
+            continue
         start = g[0]["start"]
-        nxt = groups[i + 1][1][0]["start"] if i + 1 < len(groups) else None
-        end = nxt if nxt is not None and nxt - g[-1]["end"] < 0.6 else g[-1]["end"] + 0.25
+        # hold until the next caption (or the callout that replaces it) so there are no blank gaps
+        end = groups[i + 1][1][0]["start"] if i + 1 < len(groups) else g[-1]["end"] + 0.5
         text = line.upper().replace("’", "'")
         text = re.sub(r"[.,!?]+(?=\s|$)", "", text)   # reference shows no trailing punctuation
         y = next((p["y"] for p in pos if p["start"] <= start < p["end"]), a.y)
-        name = f"cap_{i + 1:03d}.png"
-        render(text, y, out / name, FONT)
+        name = f"cap_{len(caps) + 1:03d}.png"
+        render(text, y, out / name, FONT, fill)
         caps.append({"png": name, "text": text, "start": round(start, 3), "end": round(end, 3)})
     (out / "captions.json").write_text(json.dumps(caps, indent=1))
     print(f"{len(caps)} captions -> {out}")

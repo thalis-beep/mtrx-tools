@@ -3,13 +3,14 @@
 
 Usage: graphics_png.py graphics.json OUT_DIR
 
-graphics.json: [{"type": "callout", "text": "ZERO SUGAR", "sub": "optional small line",
-                 "start": 89.5, "end": 91.3, "y": 0.22},
+graphics.json: [{"type": "callout", "text": "ZERO SUGAR", "start": 89.5, "end": 91.3, "y": 0.25},
                 {"type": "title", "lines": ["Nectar Creatine", "For men who want a change."],
                  "start": 159.4, "end": 164.85, "y": 0.2}]
 Writes OUT_DIR/gfx_##.png (1080x1920) and OUT_DIR/graphics.json ([{png, text, start, end, pop}])
 in the same form as captions.json, so the assembler and the Premiere export treat both alike.
-Callouts are marked "pop" so the assembler scales them in.
+Callouts are marked "pop" so the assembler scales them in. House style (from the editor's Nectar
+cut): one short line in a green box at y~0.25, one callout at a time; "sub" adds a small second
+line and "color" an RGB hex, but neither is used by default.
 """
 import json
 import sys
@@ -19,11 +20,15 @@ from PIL import Image, ImageDraw, ImageFont
 
 FONT = Path(__file__).parent / "fonts" / "TikTokSans-Bold.ttf"
 W, H = 1080, 1920
-NAVY = (30, 42, 82, 255)
+GREEN = (52, 174, 51, 255)
 TITLE_STROKE = (18, 26, 48, 255)
 
 
-def callout(text, sub, y_frac):
+def hex_rgba(h):
+    return tuple(int(h.lstrip("#")[k:k + 2], 16) for k in (0, 2, 4)) + (255,)
+
+
+def callout(text, sub, y_frac, color=GREEN):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     f = ImageFont.truetype(str(FONT), 84)
@@ -34,7 +39,7 @@ def callout(text, sub, y_frac):
     h = asc + desc + (52 if sub else 0)
     bw, bh = max(tw, sw) + 72, h + 36
     x0, y0 = (W - bw) / 2, H * y_frac - bh / 2
-    d.rounded_rectangle([x0, y0, x0 + bw, y0 + bh], radius=22, fill=NAVY)
+    d.rounded_rectangle([x0, y0, x0 + bw, y0 + bh], radius=22, fill=color)
     d.text(((W - tw) / 2, y0 + 18), text, font=f, fill=(255, 255, 255, 255))
     if sub:
         d.text(((W - sw) / 2, y0 + 18 + asc + desc + 4), sub, font=fs, fill=(255, 255, 255, 230))
@@ -67,7 +72,8 @@ def main(spec, out):
     for i, g in enumerate(json.loads(Path(spec).read_text()), 1):
         name = f"gfx_{i:02d}.png"
         if g["type"] == "callout":
-            callout(g["text"], g.get("sub"), g.get("y", 0.22)).save(out / name)
+            callout(g["text"], g.get("sub"), g.get("y", 0.25),
+                    hex_rgba(g["color"]) if g.get("color") else GREEN).save(out / name)
             text, pop = g["text"], True
         else:
             title(g["lines"], g.get("y", 0.2)).save(out / name)
