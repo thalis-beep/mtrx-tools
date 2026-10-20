@@ -1,0 +1,614 @@
+[
+ {
+  "n": "01",
+  "len": 3.317,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "35db98ec-7abb-4e26-9004-f6fd1d080b58"
+   }
+  ],
+  "prompt": "The grandpa bends at the knees, grips his small grandson under the arms and strains hard to lift him: his face scrunches with effort, arms shake, he leans back, but he can't lift him at all and the boy's feet never leave the grass. The boy keeps smiling up, waiting. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "02",
+  "len": 4.644,
+  "duration": 5,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "56cc9e97-b4c2-43f9-a0be-c3f571c7f42f"
+   }
+  ],
+  "prompt": "The man grabs the heavy charcoal bag and tries to lift it; halfway up his back gives out, he winces in pain, lets the bag drop back onto the grass and clutches his lower back with one hand. Party guests in the background keep chatting. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "03",
+  "len": 4.18,
+  "duration": 5,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "31ecd06e-d823-419f-9872-a9f9e7f3707f"
+   }
+  ],
+  "prompt": "The grandpa sits slumped in the lawn chair rubbing his aching lower back and gives the little boy an apologetic look; the boy looks down sadly at the ball in his hands, shoulders dropping, disappointed. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "04",
+  "len": 2.763,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "c2d46225-0771-4a56-9c84-f1763c7df526"
+   }
+  ],
+  "prompt": "Backyard workout: the two fit buddies pump dumbbell curls with energy and big smiles; the man in the middle in the plaid shirt struggles to curl his light dumbbell, arm shaking, face straining with effort. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "05",
+  "len": 3.692,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "b0f9e9ab-bb25-414a-b69b-64d68a408147"
+   }
+  ],
+  "prompt": "The man in the plaid shirt bends forward with his hands on his knees, chest heaving, completely out of breath, shaking his head; behind him his buddies keep going, one doing jumping jacks and the other doing push-ups. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "06",
+  "len": 1.393,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "6bfad61c-fd06-4b26-abce-cdbbd1de0bff"
+   }
+  ],
+  "prompt": "Seen from behind and below, the man climbs UP the staircase away from the camera, slowly and heavily, gripping the banister, shoulders heaving as he catches his breath. He keeps moving upward, step after step, never down. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "07",
+  "len": 3.692,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "1f56e45a-3a29-4fcb-b54d-406dca3cad7a"
+   }
+  ],
+  "prompt": "The man dozes in the recliner, head tilted, breathing slowly; his wife stands holding two mugs, waits a moment, then her small smile fades, she sighs quietly and turns away toward the kitchen. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "08",
+  "len": 3.692,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "f168eb3f-1119-4cce-b540-ffc63d7566f8"
+   }
+  ],
+  "prompt": "In the bathroom mirror the man looks at his reflection, squeezes his soft belly with one hand, and his face sinks into a quiet, disappointed frown. Slow push-in toward the mirror. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "09",
+  "len": 3.692,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "73f246e6-66df-41ab-976c-156994bf0303"
+   }
+  ],
+  "prompt": "The couple walks toward the camera along the sunny sidewalk, relaxed; the fit young jogger runs up from behind on the wife's side, closing in. Camera tracks backward smoothly with them. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "10",
+  "len": 2.763,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "abf487b5-a2d4-4087-b035-dca8e2d4e988"
+   }
+  ],
+  "prompt": "The fit jogger runs past on the wife's side; her head turns and her eyes follow him with interest as he goes by; the husband notices her looking and his smile drops. Camera tracks backward with them. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "11",
+  "len": 2.74,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "ad6ee526-3d9f-40e8-b43d-a4bf357d0a15"
+   }
+  ],
+  "prompt": "Close-up: the man glances down at his belly, his face falls, eyes sad, he lets out a small sigh and his shoulders sink. Subtle slow push-in. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "11b",
+  "len": 5.086,
+  "duration": 6,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "54cc6afe-1ba9-4807-96a1-c87bfa4ff1f8"
+   }
+  ],
+  "prompt": "The man stands still on the sidewalk and stares at his reflection in the shop window, his round belly visible in the glass; slowly his shoulders drop and he looks down. Gentle slow camera drift. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "12",
+  "len": 2.275,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "b82104ef-1a14-46b3-a772-7d8660b20b8c"
+   }
+  ],
+  "prompt": "The man is slumped deep in the recliner, remote loosely in his hand, blank empty stare toward the TV, barely moving; he slowly slides a little lower. Soft TV light flickers on his face. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "13",
+  "len": 3.669,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "627308d6-cc79-4281-9ee7-2d735177ef2b"
+   }
+  ],
+  "prompt": "Night, TV glow flickering: the man cracks open a can of beer with a tired, flat expression and takes a slow sip. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "14",
+  "len": 3.204,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "a038ac04-94ca-4f09-a569-69ce68ce64be"
+   }
+  ],
+  "prompt": "The man sinks slowly deeper into the recliner as the room grows darker around him, his eyes half close, empty beer cans on the side table. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "15",
+  "len": 2.276,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "34a69c8e-e528-4fa0-bb3e-e6805854d3c9"
+   }
+  ],
+  "prompt": "The man stands at the dark night window looking at his tired reflection in the glass, blinks slowly, a heavy, resigned look. Street lights glow outside. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "16",
+  "len": 3.204,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "0d6fb62b-34a9-4261-b9b7-e38e85c5e2f9"
+   }
+  ],
+  "prompt": "Dark night: the man sits alone on the porch steps under the single porch light, elbows on his knees, head hanging, and slowly rubs his face with his hands. Moths flicker around the lamp. Static camera, steady warm porch light, deep blue night sky. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "17",
+  "len": 3.646,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "35ef504e-fe6d-42f7-bfb9-199a529f94de"
+   }
+  ],
+  "prompt": "Dark night on the porch steps: the son, sitting beside his dad, puts a hand on his dad's back and leans in close; the dad slowly lifts his head and looks at him. Steady warm porch light, deep blue night sky. Static camera. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "18",
+  "len": 3.204,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "25268e72-efe7-436a-b3f8-4ecece7afb16"
+   }
+  ],
+  "prompt": "At the kitchen table the son, his hand on his dad's shoulder, gives him a warm, encouraging look and a small nod; the dad looks back at him, listening, a hint of hope appearing on his face. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "19",
+  "len": 3.646,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "66462ec9-6e43-4340-ac26-ef2f4875350e"
+   }
+  ],
+  "prompt": "The son's hand slides the pouch a few inches across the table toward his dad, and the dad's hand reaches in to take it. Slow camera push-in. The pouch label stays perfectly unchanged and sharp. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "20",
+  "len": 3.645,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "6073790d-4c53-4659-a393-1589181f6588"
+   }
+  ],
+  "prompt": "The glowing line graph comes alive: sparkles drift, the line after 40 dips down and fades, particles fall like dust. Slow camera push-in. The number 40 stays unchanged. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "21",
+  "len": 4.087,
+  "duration": 5,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "da0892e2-d851-4ccb-b308-fcd42890d79d"
+   }
+  ],
+  "prompt": "Golden electric sparks pulse through the glowing brain and travel down the nerves into the muscle fibers, which light up and flex with energy. Slow camera drift through the starry space. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "22",
+  "len": 3.645,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "5cc5aabe-6a6f-45e7-b9d4-a2be67490e32"
+   }
+  ],
+  "prompt": "In the locker room the young athlete looks down at his water bottle and carefully pours a short, small stream of white powder from the stick packet into the clear water, then stops. The water stays clear. The packet label stays unchanged. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "23",
+  "len": 3.646,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "6fea2199-d1c9-42b8-a7da-81ee3276c4f3"
+   }
+  ],
+  "prompt": "The strong coach on the sideline blows his whistle and pumps his fist with energy while the background coaches clap. Sunny stadium. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "24",
+  "len": 3.181,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "3aeca47e-7d3c-42b3-98f8-324f29748f8a"
+   }
+  ],
+  "prompt": "The coach sprints alongside the young football players across the field, keeping up easily with a big smile; camera tracks backward with them. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "25",
+  "len": 2.717,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "98ca89d2-de0f-40fb-bf37-05135d560986"
+   },
+   {
+    "role": "end_image",
+    "value": "98ca89d2-de0f-40fb-bf37-05135d560986"
+   }
+  ],
+  "prompt": "The son calmly taps his finger on the pouch label and gives a small confident nod; the dad looks at the pouch and nods slowly, impressed. Calm, gentle movements, no sudden reactions. Nobody talks; mouths stay closed or relaxed. The pouch label stays unchanged. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "26",
+  "len": 3.645,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "bddeafcb-112c-4e23-8986-651141fd846e"
+   },
+   {
+    "role": "end_image",
+    "value": "bddeafcb-112c-4e23-8986-651141fd846e"
+   }
+  ],
+  "prompt": "Product shot: slow, smooth camera push-in on the pouch on the kitchen counter, soft sunlight and leaf shadows shift gently. The pouch stays perfectly still and its label unchanged. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "27",
+  "len": 5.457,
+  "duration": 6,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "f8b5e089-e786-45e8-8f18-7ed9640ccf16"
+   },
+   {
+    "role": "end_image",
+    "value": "f8b5e089-e786-45e8-8f18-7ed9640ccf16"
+   }
+  ],
+  "prompt": "Very slow camera push-in. The pouch and the black peppercorns stay completely still. Soft sunlight shifts gently. Nothing else moves. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "28",
+  "len": 1.811,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "d4359efe-f135-459b-87f8-2ca45fce3483"
+   },
+   {
+    "role": "end_image",
+    "value": "a5dc4053-9fd7-467b-ad8f-e724aee2d2fe"
+   }
+  ],
+  "prompt": "The man's hand holds the stick packet over the glass and pours a short stream of white powder into the clear water, then stops. The water stays clear. The packet label stays unchanged. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "29",
+  "len": 1.834,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "2cbaa6b1-be77-4e65-8111-28b9f48a1b58"
+   }
+  ],
+  "prompt": "A hand stirs the glass with a spoon; the little bit of white powder swirls and dissolves completely and the water stays perfectly clear. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "30",
+  "len": 3.158,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "a33f6bab-dd2a-4869-80c0-ec6a97320cb5"
+   }
+  ],
+  "prompt": "The man takes a sip of water, lowers the glass and gives a little determined shrug with his open hand, as if to say 'why not', with a calm, small, confident smile. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "31",
+  "len": 3.646,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "f9d7ab97-b114-476c-89fe-c86ff6e7954e"
+   }
+  ],
+  "prompt": "In the mirror the man turns his body slightly side to side, checking himself out, pats his belly, raises his eyebrows, and a small, pleasantly surprised smile grows on his face. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "32",
+  "len": 3.622,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "ca50da95-b9bd-47ee-b904-c38322e8c02e"
+   }
+  ],
+  "prompt": "Seen from behind and below, the man climbs UP the stairs away from the camera easily and quickly, light energetic steps, one hand sliding along the rail. He keeps moving upward, never down. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "33",
+  "len": 3.181,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "010b5a62-9661-486d-bc0c-1d10b90a0285"
+   }
+  ],
+  "prompt": "At the workbench the man studies his blueprint with a focused, sharp expression, quickly marks lines with his pencil and gives a decisive nod. Fast, determined energy. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "34",
+  "len": 3.646,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "0a5dc558-e22c-4750-b8ea-ab6ebf4d787d"
+   }
+  ],
+  "prompt": "The man walks in through the front door after work full of energy, drops his keys in the bowl and smiles, his step light and bouncy, warm evening light behind him. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "35",
+  "len": 3.599,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "bd3ccb42-a2cb-4519-a1cf-786906174ac6"
+   }
+  ],
+  "prompt": "The man kneels on the porch and hammers a nail into the loose deck board with confident strokes; the board settles flush, he presses it with his hand and gives a satisfied nod. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "36",
+  "len": 3.181,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "3c5ceb15-3e69-43ae-8ef2-5edf38e36385"
+   }
+  ],
+  "prompt": "The grandpa finishes throwing the football in a smooth arc; the kids jump up to catch it and cheer. Golden-hour backyard, playful energy. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "37",
+  "len": 4.551,
+  "duration": 5,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "42e84031-d44d-422d-b4fb-317314217c80"
+   }
+  ],
+  "prompt": "In the kitchen the man drops the beer cans one by one into the trash can, lets the lid close, brushes off his hands and smiles, satisfied. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "38",
+  "len": 2.694,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "a3feac0c-31ca-4063-a4c3-c873f5eb40c0"
+   }
+  ],
+  "prompt": "In the mirror the man flexes his bicep, looks at it, and breaks into a proud, slightly goofy grin, then flexes again. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "39",
+  "len": 2.716,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "f28fcb8d-b707-41ce-a05a-acb47d6b0f88"
+   }
+  ],
+  "prompt": "At sunrise the man stands on the porch with his arms open wide, takes a deep breath of fresh air, chest rising, eyes closed, peaceful smile; birds fly across the golden sky. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "40",
+  "len": 2.717,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "d18c652f-42b6-4a9f-ac29-4bc27af2576b"
+   }
+  ],
+  "prompt": "The man leans on the mantle and looks at the wedding photo, a warm nostalgic smile slowly spreading across his face. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "41",
+  "len": 3.599,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "80966957-13ed-4b40-85f6-263eccea768c"
+   }
+  ],
+  "prompt": "Candlelit dinner: the wife rests her chin on her hand and looks at her husband with a warm, admiring smile; he notices and smiles back, a little shy. Candles flicker softly. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "43",
+  "len": 3.181,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "0bc02984-c174-4976-a99d-172e4aa8c3ed"
+   }
+  ],
+  "prompt": "Close-up: the man takes in what his wife just said, his eyes get a little glassy and a quiet, proud smile slowly appears. Candles flicker softly behind him. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "44",
+  "len": 2.693,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "c2f82415-d0aa-4f87-81ba-ef01f9bfc570"
+   }
+  ],
+  "prompt": "The couple slow dances in the warm kitchen, swaying gently; she rests her head on his chest, he holds her close and smiles. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "45",
+  "len": 1.835,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "c3116286-0125-49cf-83fc-13ecc52b63c4"
+   },
+   {
+    "role": "end_image",
+    "value": "c3116286-0125-49cf-83fc-13ecc52b63c4"
+   }
+  ],
+  "prompt": "The man holds the pouch up toward the camera, points at it and raises one eyebrow with a playful, challenging look. The pouch label stays unchanged. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "46",
+  "len": 3.645,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "8295db67-902c-43a6-a3c0-af2f0465904b"
+   }
+  ],
+  "prompt": "On the sideline bench an out-of-shape man sits alone holding a soda cup, sighs and his shoulders slump while the football game goes on behind him. Static camera. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "47",
+  "len": 1.811,
+  "duration": 4,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "16b51b29-2b86-4cc2-9a88-3eb9e6cc731b"
+   }
+  ],
+  "prompt": "The out-of-shape man stays seated, still, on the bench as players, kids and families rush past in front of him in a blur; he just watches them go. Nobody talks; mouths stay closed or relaxed. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "48",
+  "len": 5.495,
+  "duration": 6,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "a9cff676-59eb-4176-afbc-705726750eb3"
+   },
+   {
+    "role": "end_image",
+    "value": "a9cff676-59eb-4176-afbc-705726750eb3"
+   }
+  ],
+  "prompt": "Slow, smooth camera push-in on the pouch and the stick packet on the kitchen counter, soft sunlight, gentle glow. Everything stays still, labels unchanged. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ },
+ {
+  "n": "42",
+  "len": 5.434,
+  "duration": 6,
+  "medias": [
+   {
+    "role": "start_image",
+    "value": "def595bc-184d-411f-a7a4-a52e69475775"
+   }
+  ],
+  "prompt": "Candlelit dinner: the wife looks lovingly at her husband, reaches across the table and rests her hand on his arm, her warm smile growing as she gives a small approving nod; her eyes sparkle. She does not talk; her lips stay together in a soft smile. Candles flicker softly. Disney/Pixar-style 3D animated film. Keep the exact characters, faces, outfits, art style, lighting and framing of the start image. Natural, believable acting with clear, readable emotion and smooth, realistic body mechanics. No text, captions or logos added."
+ }
+]

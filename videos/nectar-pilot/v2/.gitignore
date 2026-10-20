@@ -1,2 +1,6 @@
 stills/*.png
 s45/
+clips/watch_*.txt
+clips/.shot*
+clips/*.mp4
+edit_dry.json

@@ -5,6 +5,7 @@ Usage: premiere_otio.py edit.json PREMIERE_DIR [media_url_prefix]
 
 Reads the same edit.json as assemble.py and the conformed media that assemble.py wrote to
 PREMIERE_DIR/media, and writes PREMIERE_DIR/<name>.xml (a project containing one sequence).
+Overlay tracks (captions, graphics) become V2, V3... with one transparent PNG still per event.
 media_url_prefix defaults to "media/" (relative; Premiere asks to relink once). Pass an
 absolute folder, e.g. "file:///Users/me/Desktop/premiere/media/", to open without relinking.
 """
@@ -46,10 +47,24 @@ def main(edit_path, pkg, prefix="media/"):
             name=name, media_reference=ref,
             source_range=otio.opentime.TimeRange(rt(round(v["src_in"] * fps)), rt(n_frames))))
     timeline.tracks.append(vtrack)
+    total = round(t * fps)
+
+    for ov in edit.get("overlays", []):
+        events = json.loads((Path(edit_path).parent / ov["events"]).read_text())
+        track = otio.schema.Track(name=ov["name"], kind=otio.schema.TrackKind.Video)
+        cur = 0
+        for a, b, e in frame_spans(events, fps, total):
+            if a > cur:
+                track.append(otio.schema.Gap(source_range=otio.opentime.TimeRange(rt(0), rt(a - cur))))
+            span = otio.opentime.TimeRange(rt(0), rt(b - a))
+            track.append(otio.schema.Clip(
+                name=e["png"], source_range=span,
+                media_reference=otio.schema.ExternalReference(target_url=prefix + e["png"], available_range=span)))
+            cur = b
+        timeline.tracks.append(track)
 
     if edit.get("audio"):
         name = Path(edit["audio"]["file"]).stem + ".wav"
-        total = round(t * fps)
         afr = probe_frames(pkg / "media" / name, fps)
         ref = otio.schema.ExternalReference(
             target_url=prefix + name,
@@ -58,13 +73,25 @@ def main(edit_path, pkg, prefix="media/"):
         atrack.append(otio.schema.Clip(
             name=name, media_reference=ref,
             source_range=otio.opentime.TimeRange(rt(round(edit["audio"].get("src_in", 0) * fps)),
-                                                 rt(min(total, afr)))))
+                                                 rt(min(total, afr - round(edit["audio"].get("src_in", 0) * fps))))))
         timeline.tracks.append(atrack)
 
     out = pkg / (edit["name"].replace(" ", "_") + ".xml")
     otio.adapters.write_to_file(timeline, str(out), adapter_name="fcp_xml")
     fill_formats(out, fps, edit["width"], edit["height"])
-    print(f"wrote {out}: {len(vtrack)} clips, {t:.2f}s")
+    print(f"wrote {out}: {len(vtrack)} clips, {t:.2f}s, {len(timeline.tracks) - 1} more tracks")
+
+
+def frame_spans(events, fps, total):
+    """Events as frame spans on the timeline; same rounding as assemble.py so both line up."""
+    spans = []
+    for e in sorted(events, key=lambda e: e["start"]):
+        a, b = round(e["start"] * fps), min(round(e["end"] * fps), total)
+        if spans and a < spans[-1][1]:
+            spans[-1][1] = a
+        if b > a:
+            spans.append([a, b, e])
+    return spans
 
 
 def rate_el(fps):
@@ -115,13 +142,17 @@ def fill_formats(path, fps, w, h):
             enabled = ET.Element("enabled")
             enabled.text = "TRUE"
             clip.insert(2, enabled)
+            if clip.findtext("name", "").endswith(".png"):
+                # transparent still: keep its alpha over the shots below
+                ET.SubElement(clip, "alphatype").text = "straight"
+                ET.SubElement(clip, "stillframe").text = "TRUE"
             if kind == "audio":
                 st = ET.SubElement(clip, "sourcetrack")
                 ET.SubElement(st, "mediatype").text = "audio"
                 ET.SubElement(st, "trackindex").text = "1"
             # same child order Premiere itself exports
             order = ["masterclipid", "name", "enabled", "duration", "rate", "start", "end",
-                     "in", "out", "file", "sourcetrack"]
+                     "in", "out", "alphatype", "stillframe", "file", "sourcetrack"]
             children = sorted(list(clip), key=lambda e: order.index(e.tag) if e.tag in order else 99)
             for child in list(clip):
                 clip.remove(child)

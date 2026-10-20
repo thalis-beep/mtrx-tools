@@ -1,0 +1,41 @@
+[
+ {
+  "type": "callout",
+  "text": "ZERO SUGAR",
+  "start": 89.54,
+  "end": 91.344,
+  "y": 0.19
+ },
+ {
+  "type": "callout",
+  "text": "ZERO CALORIES",
+  "start": 90.78,
+  "end": 91.344,
+  "y": 0.27
+ },
+ {
+  "type": "callout",
+  "text": "NON-GMO",
+  "start": 91.82,
+  "end": 96.801,
+  "y": 0.19
+ },
+ {
+  "type": "callout",
+  "text": "BIOPERINE",
+  "sub": "bioavailability enhancer",
+  "start": 93.84,
+  "end": 96.801,
+  "y": 0.285
+ },
+ {
+  "type": "title",
+  "lines": [
+   "Nectar Creatine",
+   "For men who want a change."
+  ],
+  "start": 159.655,
+  "end": 164.85,
+  "y": 0.18
+ }
+]

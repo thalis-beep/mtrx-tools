@@ -1,0 +1,275 @@
+{
+ "name": "Nectar Alive Again V2",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "video": [
+  {
+   "file": "clips/shot01.mp4",
+   "src_in": 0.0,
+   "src_out": 3.317
+  },
+  {
+   "file": "clips/shot02.mp4",
+   "src_in": 0.0,
+   "src_out": 4.644
+  },
+  {
+   "file": "clips/shot03.mp4",
+   "src_in": 0.0,
+   "src_out": 4.18
+  },
+  {
+   "file": "clips/shot04.mp4",
+   "src_in": 0.0,
+   "src_out": 2.763
+  },
+  {
+   "file": "clips/shot05.mp4",
+   "src_in": 0.0,
+   "src_out": 3.692
+  },
+  {
+   "file": "clips/shot06.mp4",
+   "src_in": 0.0,
+   "src_out": 1.393
+  },
+  {
+   "file": "clips/shot07.mp4",
+   "src_in": 0.0,
+   "src_out": 3.692
+  },
+  {
+   "file": "clips/shot08.mp4",
+   "src_in": 0.0,
+   "src_out": 3.692
+  },
+  {
+   "file": "clips/shot09.mp4",
+   "src_in": 0.0,
+   "src_out": 3.692
+  },
+  {
+   "file": "clips/shot10.mp4",
+   "src_in": 0.0,
+   "src_out": 2.763
+  },
+  {
+   "file": "clips/shot11.mp4",
+   "src_in": 0.0,
+   "src_out": 2.74
+  },
+  {
+   "file": "clips/shot11b.mp4",
+   "src_in": 0.0,
+   "src_out": 5.086
+  },
+  {
+   "file": "clips/shot12.mp4",
+   "src_in": 0.0,
+   "src_out": 2.275
+  },
+  {
+   "file": "clips/shot13.mp4",
+   "src_in": 0.0,
+   "src_out": 3.669
+  },
+  {
+   "file": "clips/shot14.mp4",
+   "src_in": 0.0,
+   "src_out": 3.204
+  },
+  {
+   "file": "clips/shot15.mp4",
+   "src_in": 0.0,
+   "src_out": 2.276
+  },
+  {
+   "file": "clips/shot16.mp4",
+   "src_in": 0.0,
+   "src_out": 3.204
+  },
+  {
+   "file": "clips/shot17.mp4",
+   "src_in": 0.0,
+   "src_out": 3.646
+  },
+  {
+   "file": "clips/shot18.mp4",
+   "src_in": 0.0,
+   "src_out": 3.204
+  },
+  {
+   "file": "clips/shot19.mp4",
+   "src_in": 0.0,
+   "src_out": 3.646
+  },
+  {
+   "file": "clips/shot20.mp4",
+   "src_in": 0.0,
+   "src_out": 3.645
+  },
+  {
+   "file": "clips/shot21.mp4",
+   "src_in": 0.0,
+   "src_out": 4.087
+  },
+  {
+   "file": "clips/shot22.mp4",
+   "src_in": 0.0,
+   "src_out": 3.645
+  },
+  {
+   "file": "clips/shot23.mp4",
+   "src_in": 0.0,
+   "src_out": 3.646
+  },
+  {
+   "file": "clips/shot24.mp4",
+   "src_in": 0.0,
+   "src_out": 3.181
+  },
+  {
+   "file": "clips/shot25.mp4",
+   "src_in": 0.0,
+   "src_out": 2.717
+  },
+  {
+   "file": "clips/shot26.mp4",
+   "src_in": 0.0,
+   "src_out": 3.645
+  },
+  {
+   "file": "clips/shot27.mp4",
+   "src_in": 0.0,
+   "src_out": 5.457
+  },
+  {
+   "file": "clips/shot28.mp4",
+   "src_in": 0.0,
+   "src_out": 1.811
+  },
+  {
+   "file": "clips/shot29.mp4",
+   "src_in": 0.0,
+   "src_out": 1.834
+  },
+  {
+   "file": "clips/shot30.mp4",
+   "src_in": 0.0,
+   "src_out": 3.158
+  },
+  {
+   "file": "clips/shot31.mp4",
+   "src_in": 0.0,
+   "src_out": 3.646
+  },
+  {
+   "file": "clips/shot32.mp4",
+   "src_in": 0.0,
+   "src_out": 3.622
+  },
+  {
+   "file": "clips/shot33.mp4",
+   "src_in": 0.0,
+   "src_out": 3.181
+  },
+  {
+   "file": "clips/shot34.mp4",
+   "src_in": 0.0,
+   "src_out": 3.646
+  },
+  {
+   "file": "clips/shot35.mp4",
+   "src_in": 0.0,
+   "src_out": 3.599
+  },
+  {
+   "file": "clips/shot36.mp4",
+   "src_in": 0.0,
+   "src_out": 3.181
+  },
+  {
+   "file": "clips/shot37.mp4",
+   "src_in": 0.0,
+   "src_out": 4.551
+  },
+  {
+   "file": "clips/shot38.mp4",
+   "src_in": 0.0,
+   "src_out": 2.694
+  },
+  {
+   "file": "clips/shot39.mp4",
+   "src_in": 0.0,
+   "src_out": 2.716
+  },
+  {
+   "file": "clips/shot40.mp4",
+   "src_in": 0.0,
+   "src_out": 2.717
+  },
+  {
+   "file": "clips/shot41.mp4",
+   "src_in": 0.0,
+   "src_out": 3.599
+  },
+  {
+   "file": "clips/shot42.mp4",
+   "src_in": 0.0,
+   "src_out": 5.434
+  },
+  {
+   "file": "clips/shot43.mp4",
+   "src_in": 0.0,
+   "src_out": 3.181
+  },
+  {
+   "file": "clips/shot44.mp4",
+   "src_in": 0.0,
+   "src_out": 2.693
+  },
+  {
+   "file": "clips/shot45.mp4",
+   "src_in": 0.0,
+   "src_out": 1.835
+  },
+  {
+   "file": "clips/shot46.mp4",
+   "src_in": 0.0,
+   "src_out": 3.645
+  },
+  {
+   "file": "clips/shot47.mp4",
+   "src_in": 0.0,
+   "src_out": 1.811
+  },
+  {
+   "file": "clips/shot48.mp4",
+   "src_in": 0.0,
+   "src_out": 5.495
+  }
+ ],
+ "audio": {
+  "file": "audio/alive-again-v2.mp3",
+  "src_in": 2.0,
+  "gain": [
+   {
+    "start": 89.0,
+    "end": 100.6,
+    "db": 2
+   }
+  ],
+  "fade_out": 2.5
+ },
+ "overlays": [
+  {
+   "name": "Captions",
+   "events": "captions/captions.json"
+  },
+  {
+   "name": "Graphics",
+   "events": "graphics/graphics.json"
+  }
+ ]
+}

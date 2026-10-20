@@ -2,12 +2,16 @@
 """Render word-timed captions as transparent PNG overlays (TikTok-style).
 
 Usage: captions_png.py words.json OUT_DIR [--until SECONDS] [--y 0.64] [--positions positions.json]
+                       [--phrases phrases.txt]
 
 words.json: [{word, start, end}] on the song timeline (script spelling).
 Writes OUT_DIR/cap_###.png (1080x1920, transparent) and OUT_DIR/captions.json
 ([{png, text, start, end}]) for the assembler and the Premiere caption track.
 positions.json (optional): [{"start": s, "end": e, "y": 0.5}] overrides the caption
 height for shots where the default would cover a face.
+phrases.txt (optional): one caption per line, in lyric order. Each line takes its words from
+words.json and must match them exactly, so no word can go missing or change; without it the
+captions are grouped automatically.
 """
 import argparse
 import json
@@ -47,6 +51,21 @@ def chunk(words, max_words=3, gap=0.3):
     return out
 
 
+def from_phrases(words, lines):
+    groups, i = [], 0
+    for line in lines:
+        n = len(line.split())
+        got = words[i:i + n]
+        if [clean(t) for t in line.split()] != [clean(w["word"]) for w in got]:
+            raise SystemExit(f"phrase {line!r} does not match sung words "
+                             f"{' '.join(w['word'] for w in got)!r} at {words[i]['start']:.2f}s")
+        groups.append((line, got))
+        i += n
+    if i != len(words):
+        raise SystemExit(f"{len(words) - i} sung words not covered, from {words[i]['word']!r}")
+    return groups
+
+
 def render(text, y_frac, path, font):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
@@ -81,6 +100,7 @@ def main():
     ap.add_argument("--until", type=float, default=None)
     ap.add_argument("--y", type=float, default=0.645)
     ap.add_argument("--positions", default=None)
+    ap.add_argument("--phrases", default=None)
     a = ap.parse_args()
     words = json.loads(Path(a.words).read_text())
     if a.until:
@@ -89,12 +109,16 @@ def main():
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
     caps = []
-    groups = chunk(words)
-    for i, g in enumerate(groups):
+    if a.phrases:
+        lines = [x.strip() for x in Path(a.phrases).read_text().splitlines() if x.strip()]
+        groups = from_phrases(words, lines)
+    else:
+        groups = [(" ".join(w["word"] for w in g), g) for g in chunk(words)]
+    for i, (line, g) in enumerate(groups):
         start = g[0]["start"]
-        end = groups[i + 1][0]["start"] if i + 1 < len(groups) and groups[i + 1][0]["start"] - g[-1]["end"] < 0.6 \
-            else g[-1]["end"] + 0.25
-        text = " ".join(w["word"] for w in g).upper().replace("’", "'")
+        nxt = groups[i + 1][1][0]["start"] if i + 1 < len(groups) else None
+        end = nxt if nxt is not None and nxt - g[-1]["end"] < 0.6 else g[-1]["end"] + 0.25
+        text = line.upper().replace("’", "'")
         text = re.sub(r"[.,!?]+(?=\s|$)", "", text)   # reference shows no trailing punctuation
         y = next((p["y"] for p in pos if p["start"] <= start < p["end"]), a.y)
         name = f"cap_{i + 1:03d}.png"
