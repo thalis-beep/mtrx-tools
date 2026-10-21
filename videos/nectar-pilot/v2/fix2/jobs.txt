@@ -1,0 +1,22 @@
+# Review round 2 (Frame.io, 2026-10-21): new start frames (GPT Image 2.5) and MiniMax H3 2K clips
+still 09   00d61f9b-521c-4e11-9587-a7f5b2ca8fca  dad not smiling
+still 22   de322345-c190-43d1-a03b-8524cdd946a5  real stick, torn end (8a1da52b before tear)
+still 24   322fd177-d836-4d6f-87bf-0f26328d75b0  runners spaced apart
+still 28   6c9dae75-80ff-49f0-b3a9-f71dccbac676  real stick, torn end; end frame b32853f3-51e8-42a5-9dad-8aa6da898591
+still 31   132905fa-0328-427b-9cac-01c73998ba5c  mirror reflection only, looking at himself
+still 35   b7a12c96-7e83-40fb-b551-5d221c085e2d  clear hammering pose
+still 36   aa9370b0-19e9-4de5-a94e-d3e998641cca  ball in hand, arm cocked (after-release ref 3d62b70e)
+still 37   4fac3c6b-5c67-466d-ad1d-dfcc64270fff  clutching beers with both hands
+still 38   a475ceb6-6684-4f42-81b2-e2c4c02041d0  mirror reflection only, flex
+clip 02    9434748d-e186-40fc-9b4c-beb0ac13ba07
+clip 04    2fbbe5e3-c91e-4860-a89a-57f6ce57b5ad
+clip 0910  2fdc29a8-2e44-4909-bd78-09bb0588d996
+clip 17    92e9bb61-c1cb-461f-ad40-342193b378ce
+clip 22    b97d6ee8-2d5b-4ca9-b189-f59781935f18
+clip 24    13765a9c-c186-43fd-8fb3-a59ea43b3d74
+clip 28    5fe55d5d-b144-4102-ac48-442640b5fb9a
+clip 31    265a96ac-9f88-4e55-99a3-60cb6ed01d33
+clip 35    a4b56c40-328a-4543-8805-13fbc5024fe5
+clip 36    5240578c-fceb-41d4-ad82-283ca7947b2b
+clip 37    d54c7245-8ad1-4fb3-b5e3-28b7845c0b7e
+clip 38    f1679ceb-3a93-4e27-9833-6da5c0c28d1b
