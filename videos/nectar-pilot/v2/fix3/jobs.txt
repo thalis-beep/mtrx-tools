@@ -1,0 +1,4 @@
+# Review round 3 (client note 2026-10-21): shot 22 packet opened like the client's reference
+reference  f4f8c692-ce81-4e75-94e2-94b9ec5ad07e  stick_open_reference.png (uploaded)
+still 22   41e33855-6f9e-411f-8357-c17d381c9b51  chosen (alt 352fc3ba-2650-45b0-8a46-eeb27618a140)
+clip 22    ba0cf92b-48dd-410c-ac49-c0d8b629e2c5  start = end = still
