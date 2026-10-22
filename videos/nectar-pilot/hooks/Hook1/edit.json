@@ -1,0 +1,23 @@
+{
+ "name": "Hook1_Weak_Dad",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "video": [
+  {
+   "file": "media/H1_01_lift_grandson.mp4",
+   "src_in": 0.0,
+   "src_out": 6.56
+  },
+  {
+   "file": "media/H1_02_charcoal_bag.mp4",
+   "src_in": 0.0,
+   "src_out": 5.127
+  },
+  {
+   "file": "media/H1_03_sad_grandson.mp4",
+   "src_in": 0.0,
+   "src_out": 5.127
+  }
+ ]
+}

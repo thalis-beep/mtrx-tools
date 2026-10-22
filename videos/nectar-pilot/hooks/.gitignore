@@ -1,3 +1,5 @@
 stills/*.png
 clips/
 Hook*/media/
+!Hook_Nectar_*.zip
+!review_hooks.jpg

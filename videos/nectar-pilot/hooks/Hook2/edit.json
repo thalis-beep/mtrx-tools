@@ -1,0 +1,28 @@
+{
+ "name": "Hook2_Beach",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "video": [
+  {
+   "file": "media/H2_01_tshirt_stays_on.mp4",
+   "src_in": 0.0,
+   "src_out": 5.127
+  },
+  {
+   "file": "media/H2_02_wife_glance.mp4",
+   "src_in": 0.0,
+   "src_out": 5.127
+  },
+  {
+   "file": "media/H2_03_he_notices.mp4",
+   "src_in": 0.0,
+   "src_out": 5.127
+  },
+  {
+   "file": "media/H2_04_deflated.mp4",
+   "src_in": 0.0,
+   "src_out": 5.127
+  }
+ ]
+}
