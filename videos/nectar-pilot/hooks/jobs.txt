@@ -9,3 +9,4 @@ H3a trudges home               still 2880f68c-4ae9-4853-8ed2-83319502c4c6  clip 
 H3b on couch in boots          still a7be5387-c62b-4c62-a508-0e667d7b3b12  clip 5fb44ee7-bfa9-4e2c-b121-28e7cbb23711
 H3c wife leaves without him    still d8cf808a-c5df-45c2-b11c-7c0ac0331b21  clip f10315b9-f107-4f59-ace0-b19052c197e6
 H3d alone, door closes         still f2c782d9-5205-49c3-bd42-99f10a81f9b4  clip d4579ea2-ffb8-4e73-9d6d-71f9e77375db
+H2b restaged  still 8dcc9544-ead9-4869-bb7a-68444084f6b0  clip 1641bbe3-f53a-4307-9e05-f77a3422a947 (replaces 0de1c562)
