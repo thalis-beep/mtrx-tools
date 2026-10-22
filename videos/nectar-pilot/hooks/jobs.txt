@@ -11,3 +11,4 @@ H3c wife leaves without him    still d8cf808a-c5df-45c2-b11c-7c0ac0331b21  clip 
 H3d alone, door closes         still f2c782d9-5205-49c3-bd42-99f10a81f9b4  clip d4579ea2-ffb8-4e73-9d6d-71f9e77375db
 H2b restaged  still 8dcc9544-ead9-4869-bb7a-68444084f6b0  clip 1641bbe3-f53a-4307-9e05-f77a3422a947 (replaces 0de1c562)
 H2b v3  start bf23cbf1-8dcd-4854-ae09-f69d25d93142 end 69a6ce1e-a3c0-44e6-8a40-c74051c369b6 clip 0b2aa516-3680-4671-8568-89e14c0a2384 (surfer crosses L->R in front)
+H2b v4  start b0d5a9ec-187b-4ae1-87ca-2db79096e5ee (hands in lap) clip 0112b6c8-4efa-4a27-80ea-15d0dab07fa0 (take B, static cam); alt take 8584f6e2
