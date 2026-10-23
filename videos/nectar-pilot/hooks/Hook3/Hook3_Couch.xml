@@ -125,7 +125,7 @@
               </clipitem>
               <clipitem frameBlend="FALSE" id="clipitem-3">
                 <masterclipid>masterclip-video-3</masterclipid>
-                <name>H3_03_kitchen_nectar.mp4</name>
+                <name>H3_03_kitchen_nectar_pouch.mp4</name>
                 <enabled>TRUE</enabled>
                 <duration>153</duration>
                 <rate>
@@ -137,8 +137,8 @@
                 <in>0</in>
                 <out>153</out>
                 <file id="file-3">
-                  <pathurl>media/H3_03_kitchen_nectar.mp4</pathurl>
-                  <name>H3_03_kitchen_nectar.mp4</name>
+                  <pathurl>media/H3_03_kitchen_nectar_pouch.mp4</pathurl>
+                  <name>H3_03_kitchen_nectar_pouch.mp4</name>
                   <rate>
                     <timebase>30</timebase>
                     <ntsc>FALSE</ntsc>
