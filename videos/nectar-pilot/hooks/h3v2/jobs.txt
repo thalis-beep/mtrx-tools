@@ -2,3 +2,4 @@ Hook 3 v2 (safe zone: 4:5 then outpaint)
 1 flashback  4:5 f507070d -> 9:16 16eff009-4d84-4899-98c7-4639411c50ca  clip e7aee7cb-e0f7-48bc-8bdd-77953725e73a
 2 couch      reuse H3_02 (clip 5fb44ee7)
 3 kitchen    4:5 40b8c960 -> 9:16 1d968054-5bc8-4af7-8544-b7686298fc85  clip 5f563010-53cf-413c-885f-2fdcc1ffce0b
+3 kitchen POUCH  4:5 e62c72e5 -> 9:16 9765bc06-6e96-4ab6-82aa-c662afab4d81  clip 75c4e6d5-83e7-45fd-bf3a-dd94a61e4369
