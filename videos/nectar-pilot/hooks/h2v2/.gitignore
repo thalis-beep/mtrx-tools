@@ -1,3 +1,5 @@
 *.png
 *.mp4
 !review_h2v2.jpg
+!Hook2_redo_frames_and_prompts.zip
+pack/
