@@ -5,7 +5,7 @@
  "height": 1920,
  "video": [
   {
-   "file": "media/H3_01_home_from_work.mp4",
+   "file": "media/H3_01_flashback_young.mp4",
    "src_in": 0.0,
    "src_out": 5.127
   },
@@ -15,12 +15,7 @@
    "src_out": 5.127
   },
   {
-   "file": "media/H3_03_wife_leaves.mp4",
-   "src_in": 0.0,
-   "src_out": 5.127
-  },
-  {
-   "file": "media/H3_04_alone.mp4",
+   "file": "media/H3_03_kitchen_nectar.mp4",
    "src_in": 0.0,
    "src_out": 5.127
   }
