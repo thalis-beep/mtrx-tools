@@ -3,3 +3,4 @@ Hook 3 v2 (safe zone: 4:5 then outpaint)
 2 couch      reuse H3_02 (clip 5fb44ee7)
 3 kitchen    4:5 40b8c960 -> 9:16 1d968054-5bc8-4af7-8544-b7686298fc85  clip 5f563010-53cf-413c-885f-2fdcc1ffce0b
 3 kitchen POUCH  4:5 e62c72e5 -> 9:16 9765bc06-6e96-4ab6-82aa-c662afab4d81  clip 75c4e6d5-83e7-45fd-bf3a-dd94a61e4369
+3 kitchen POUCH SAD  9:16 7ceed6f8-d681-4c28-bb4b-237e49e7d326 (badge fixed; e0710c21 had '9')  clip 7f9da2bd-884c-4f88-aed9-7f42a69f40eb
