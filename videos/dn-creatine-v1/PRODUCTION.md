@@ -153,3 +153,14 @@ logo, label layout, flavours in the variety pack.
 | S17 | competitor man again | same ref | S09 tunnel ref | PASS |
 
 All clips: kling3_0 · pro · 5 s · 9:16 · sound off. Job IDs in `assets.json`.
+
+## 12. Clips QC (2026-10-27)
+All 21 clips are kling3_0 pro, 5 s, silent, 9:16 (1076×1924, scaled to 1080×1920 in the edit). All PASS.
+- S14: the model pushed in instead of pulling out → **reversed in the edit** (static shot, no regen).
+- S20 end card: the clay pouch's small print is inaccurate (net wt) → final edit should overlay the real packshot.
+- Rough cut: `renders/V1_roughcut.mp4` (75 s, EST timing, no VO, S15 slate). Trims are in `roughcut-plan.txt`.
+
+## 13. Open items
+1. Approve the stick-packet design (proposal b2843aab) → generate S15 (pour) = 1 still + 1 clip ≈ 9 credits.
+2. VO file → retime the edit (assets are reusable; only trims change).
+3. Final edit: caption words, ingredient icons (BioPerine = "helps nutrient absorption"), real packshot on the end card, music/SFX.
