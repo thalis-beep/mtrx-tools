@@ -1,0 +1,27 @@
+{
+ "refs": {"woman": "8034f7a4-e361-4323-883d-bbcd7087bfcb", "woman_bloated": "148498dc-2617-42d2-84f4-d43c3f56a714", "monster": "0fa750c3-7824-4ca3-93f7-205f329b3fcb", "kitchen": "b5945500-8992-47fa-b50c-2f5ffb9cbaa8", "pouch_clay": "7274978b-4799-45c2-ba78-d98aa67fc6d9", "pouch_photo_media": "7f904db7-7b8d-4a9e-9dda-e76fd11ba517", "stick_PROPOSAL": "b2843aab-f0c0-400c-9563-4a06b38dbe8c"},
+ "scenes": {
+  "S01":  {"still": "550d0f94-3b56-4295-ac0d-bdec81cedf9f", "clip": "0a8d1154-c739-40f3-851d-70c5922eccd7"},
+  "S01b": {"still": "8cfd30bc-b3f5-47d2-b2ec-66aacade6241", "clip": "9e01d3a6-3a6c-4167-ae24-f32fc69b6851"},
+  "S02":  {"still": "10564d24-5c1c-4567-8537-376f7bd6ce8d", "clip": "f67f008e-0d48-4b6c-889b-23ecaa893b79"},
+  "S03":  {"still": "9b4b3742-ae1f-470e-bb5b-27586cfbfc99", "end": "ef728698-194b-49c3-a93c-f0a0c249c377", "clip": "0b544e5b-8200-4f1f-9625-d38fdfd266e5"},
+  "S04":  {"still": "ef728698-194b-49c3-a93c-f0a0c249c377", "clip": "0697636b-4726-467e-8b07-364bc44bb08b"},
+  "S05":  {"still": "7a54fd7a-9588-4fc1-96a0-341adcc5f96d", "clip": "be235ce9-3b2d-4dee-83f3-2f6d96e8c864"},
+  "S06":  {"still": "e9241738-38fe-410f-9899-e8c31a2ca0c3", "clip": "98e8cfc2-b424-4aeb-9d6c-3797903a4abd"},
+  "S07":  {"still": "e17a938a-7d9a-4a89-9979-090621abf321", "clip": "b4265777-e7c8-44f9-8aff-4720216876f8"},
+  "S08":  {"still": "a0128334-0a02-468f-af2a-f393300641e0", "clip": "e635298c-beea-46a4-a8b1-acf50958ea49"},
+  "S09":  {"still": "13ebec35-5787-49f1-96a6-822950edaefe", "clip": "87a3385f-2282-49f1-a0f2-ef646f6d5ff8"},
+  "S10":  {"still": "d3897524-b4d4-4d3a-8cd9-1cb4627e99f3", "clip": "5b91c328-4b32-41e5-95f5-1c3c12465e0f"},
+  "S11":  {"still": "5df82f84-222e-4a79-9099-fb6de76f6de2", "clip": "1f7ab976-8b00-437e-8906-c5712b0f4fe0"},
+  "S12":  {"still": "2293e729-cabf-4dc6-be64-11166455ecd1", "clip": "b9052999-f8b8-40c1-912c-7c169a674f11"},
+  "S13":  {"still": "fd377e49-b334-4999-bac0-347caff4de09", "clip": "21aea9e0-3e21-4e14-a55e-5a8f5fa78769"},
+  "S14":  {"still": "5ef75643-942f-4bd3-a5c9-8a21ae78c982", "clip": "0d168d3d-47f5-474c-b9a3-b0dc05a23053"},
+  "S15":  {"still": null, "clip": null, "status": "ON HOLD: stick packet design needs client approval"},
+  "S16":  {"still": "7639cdbb-0784-4e4d-9b42-ed2ced0c5635", "clip": "561c4939-d670-4039-8550-1c313d41d7f0"},
+  "S17":  {"still": "f2d61d39-8914-4096-bd01-e2f8ee288d09", "clip": "2e3133ce-43b3-46f0-bb55-041de3643510"},
+  "S18":  {"still": "15520dce-ddcc-40a2-99a1-b8b2f31c10ea", "clip": "f9dd297d-7f2d-43e5-b8e0-e0e212b55eff"},
+  "S19":  {"still": "fae5be0b-e8b8-477c-8bd8-5005e00511fc", "clip": "38cff130-906a-44a0-96ec-b0eaa76ff4bf"},
+  "S20":  {"still": "6e071da9-5a3a-45c2-a748-5958c21f1f82", "clip": "d335b7fe-3f85-4ccd-a200-bdc98d0f741d"},
+  "S21":  {"still": "48d8f270-b15f-4788-941e-51b0ac33c4af", "clip": "5e847faf-1c37-4dd0-9adf-6f352d9c66e7"}
+ }
+}

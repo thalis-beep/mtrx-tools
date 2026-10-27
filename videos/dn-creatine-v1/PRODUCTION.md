@@ -131,3 +131,25 @@ logo, label layout, flavours in the variety pack.
 ## 9. Revision log
 | Date | Scene | Problem | Change | Result |
 |---|---|---|---|---|
+
+## 10. Product update (2026-10-27)
+- Real reference received: **white** stand-up variety pouch with silver waves (`refs/nectar_variety_pack.jpg`).
+  It **overrides the script's "clean blue packet"**. Flagged to the user.
+- Clay pouch lock 7274978b: PASS on shape, wordmark, waves, Variety Pack box, stat boxes, badge.
+  Small print is inaccurate (net weight renders as 5.4 oz / 98.8 g; real is 3.4 oz / 98.5 g), so keep
+  small text unreadable in scenes and **composite the real packshot on the end card**.
+- Single-serve stick: no reference. Proposal b2843aab was derived from the pouch design and
+  **needs client approval** (S15 on hold).
+- The S01 "cheap creatine" is a dull grey unbranded foil sachet, so it can't be confused with
+  the white Nectar pack.
+
+## 11. QC log (stills)
+| Scene | 1st try | Problem | Fix | Result |
+|---|---|---|---|---|
+| S02 | woman drinking | missing clock insert | "no people" + object-only; first try kept as S01b (drink) | PASS |
+| S06–S08 | competitor's bearded man leaked from style ref 8ef3c210 | ref leak | retired that ref; used our own S09 tunnel as ref + "no humans" | PASS |
+| S14 | woman holding pouch | needed empty space for icons | product-only, no hands | PASS |
+| S16 | woman drinking | missing glass ECU | object-only | PASS |
+| S17 | competitor man again | same ref | S09 tunnel ref | PASS |
+
+All clips: kling3_0 · pro · 5 s · 9:16 · sound off. Job IDs in `assets.json`.
