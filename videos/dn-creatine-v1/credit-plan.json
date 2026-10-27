@@ -1,0 +1,168 @@
+{
+ "balance": 13110.72,
+ "unit_costs": {
+  "still": 1.5,
+  "lock": 1.5,
+  "clip": {
+   "kling3_0_pro_5": 7.5
+  }
+ },
+ "locks": 10,
+ "scenes": [
+  {
+   "id": "S01",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "simple",
+   "hero": true
+  },
+  {
+   "id": "S02",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "simple",
+   "hero": false
+  },
+  {
+   "id": "S03",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "simple",
+   "hero": false
+  },
+  {
+   "id": "S04",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "complex",
+   "hero": false
+  },
+  {
+   "id": "S05",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "complex",
+   "hero": false
+  },
+  {
+   "id": "S06",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "complex",
+   "hero": false
+  },
+  {
+   "id": "S07",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "complex",
+   "hero": false
+  },
+  {
+   "id": "S08",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "simple",
+   "hero": false
+  },
+  {
+   "id": "S09",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "simple",
+   "hero": false
+  },
+  {
+   "id": "S10",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "complex",
+   "hero": false
+  },
+  {
+   "id": "S11",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "simple",
+   "hero": false
+  },
+  {
+   "id": "S12",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "simple",
+   "hero": true
+  },
+  {
+   "id": "S13",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "simple",
+   "hero": false
+  },
+  {
+   "id": "S14",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "complex",
+   "hero": false
+  },
+  {
+   "id": "S15",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "complex",
+   "hero": false
+  },
+  {
+   "id": "S16",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "simple",
+   "hero": false
+  },
+  {
+   "id": "S17",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "complex",
+   "hero": false
+  },
+  {
+   "id": "S18",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "simple",
+   "hero": false
+  },
+  {
+   "id": "S19",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "simple",
+   "hero": false
+  },
+  {
+   "id": "S20",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "simple",
+   "hero": false
+  },
+  {
+   "id": "S21",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "simple",
+   "hero": true
+  },
+  {
+   "id": "S22",
+   "stills": 1,
+   "clip": "kling3_0_pro_5",
+   "complexity": "simple",
+   "hero": true
+  }
+ ],
+ "finishing": 0
+}
