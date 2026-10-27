@@ -1,0 +1,17 @@
+{
+  "balance": 13187.72,
+  "unit_costs": {
+    "still": 0.5,
+    "lock": 0.5,
+    "clip": {"kling3_0_std_5": 6.25, "kling3_0_pro_5": 7.5}
+  },
+  "locks": 6,
+  "scenes": [
+    {"id": "S01", "stills": 1, "clip": "kling3_0_pro_5", "complexity": "simple", "hero": true},
+    {"id": "S02", "stills": 1, "clip": "kling3_0_std_5", "complexity": "simple"},
+    {"id": "S03", "stills": 1, "clip": "kling3_0_std_5", "complexity": "complex"},
+    {"id": "S04", "stills": 2, "clip": "kling3_0_std_5", "complexity": "complex"},
+    {"id": "S05", "stills": 1, "clip": "kling3_0_pro_5", "complexity": "simple", "hero": true}
+  ],
+  "finishing": 0
+}
