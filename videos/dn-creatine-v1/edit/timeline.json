@@ -41,13 +41,6 @@
    "slot": "S06f",
    "clip": "S06f",
    "start": 11.4,
-   "end": 14.9,
-   "in": 0.3
-  },
-  {
-   "slot": "S06",
-   "clip": "S06",
-   "start": 14.9,
    "end": 16.1,
    "in": 0.3
   },
@@ -226,9 +219,9 @@
    "db": -9
   },
   {
-   "f": "05_whoosh_dive",
-   "t": 14.85,
-   "db": -5
+   "f": "15_whoosh_short",
+   "t": 16.05,
+   "db": -8
   },
   {
    "f": "06_powder_rain_gasps",
