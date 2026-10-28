@@ -164,3 +164,15 @@ All 21 clips are kling3_0 pro, 5 s, silent, 9:16 (1076×1924, scaled to 1080×19
 1. Approve the stick-packet design (proposal b2843aab) → generate S15 (pour) = 1 still + 1 clip ≈ 9 credits.
 2. VO file → retime the edit (assets are reusable; only trims change).
 3. Final edit: caption words, ingredient icons (BioPerine = "helps nutrient absorption"), real packshot on the end card, music/SFX.
+
+## 14. Edit pass (2026-10-28)
+- VO: ElevenLabs "Nathan Narrator" parts 1+2 = 75.83 s, word-timed with faster-whisper, matches the script verbatim.
+- Stick packet reference received → clay stick lock df041fc9 (PASS). S15 pour: v1 and v2 turned the water milky
+  (contradicts "no chalky sludge") → v3 uses start+end frames with clear water (d30c7e47, PASS), played at 1.5×.
+- New shot S17b (BioPerine line): S17 still with "golden sparkles absorbed into the walls" (570a5b9d).
+- SFX: 18 effects (17 from mirelo_text_to_audio at 0.5 cr; the magic reveal was synthesised locally after two
+  near-silent generations). Normalised, placed in `edit/timeline.json`.
+- Captions: 76 one-line PNGs (Anton, caps, white, black stroke) + captions.srt. Graphics: hook title,
+  4 ingredient badges (BioPerine = "helps nutrient absorption"), guarantee.
+- Deliverables: `dist/DNCR5_V1_Premiere.zip` (FCP7 XML + media), `edit/preview/DNCR5_V1_preview.mp4`.
+  Rebuild everything with `python3 scripts/make_graphics.py edit/words.json edit && python3 scripts/build_edit.py`.

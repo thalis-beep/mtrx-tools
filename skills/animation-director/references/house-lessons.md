@@ -60,3 +60,22 @@ What worked:
   perfect before/after variant.
 - The clay-rendered product pouch matched logo/layout well; only small print was wrong.
 ```
+
+```
+Job: DN Creatine V1, edit pass  Date: 2026-10-28  Plan: A
+What worked:
+- VO word timing: faster-whisper small.en (pip install faster-whisper; feed audio as a numpy array
+  from ffmpeg, because the bundled PyAV can break on decode). Cut each shot about 0.1 s before its key word.
+- Captions (house style): Anton, ALL CAPS, white fill, black stroke, one line, max ~18 chars,
+  phrase-balanced chunks, lower third (y≈1330 of 1920). Deliver as PNG track plus an .srt.
+- SFX: Higgsfield `mirelo_text_to_audio` (0.5 cr, 1–3 s) is good for foley and cartoon hits.
+  Check each with ebur128 and normalise to about -20 LUFS. It fails on musical/magic sounds (near-silent
+  output twice), so synthesise those locally.
+- Premiere handoff: FCP7 XML (xmeml v4) with conformed segments on V1, PNG overlays on V2+, VO on A1,
+  SFX lanes on A2+. Define each <file> once and reference it by id after that. Mix target: -14 LUFS.
+What failed and the fix:
+- Kling turns "powder poured into water" into MILK, even when told "crystal clear". That contradicts
+  "no sludge" claims. Fix: give it start AND end frames, both with clear water.
+- A belly-glow variant left a floating green blob in a later shot. Remove variant effects (glow) from
+  the still before animating scenes where the character is back to normal.
+```

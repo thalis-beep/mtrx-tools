@@ -1,0 +1,574 @@
+{
+ "captions": [
+  {
+   "i": 1,
+   "s": 0.0,
+   "e": 0.9,
+   "t": "ONE PACKET OF",
+   "png": "captions/cap_001.png"
+  },
+  {
+   "i": 2,
+   "s": 0.9,
+   "e": 1.66,
+   "t": "CREATINE",
+   "png": "captions/cap_002.png"
+  },
+  {
+   "i": 3,
+   "s": 1.66,
+   "e": 2.66,
+   "t": "AND AN HOUR LATER",
+   "png": "captions/cap_003.png"
+  },
+  {
+   "i": 4,
+   "s": 2.66,
+   "e": 3.46,
+   "t": "SHE LOOKS THREE",
+   "png": "captions/cap_004.png"
+  },
+  {
+   "i": 5,
+   "s": 3.46,
+   "e": 4.66,
+   "t": "MONTHS PREGNANT",
+   "png": "captions/cap_005.png"
+  },
+  {
+   "i": 6,
+   "s": 4.86,
+   "e": 5.82,
+   "t": "THAT BLOATING MEANS",
+   "png": "captions/cap_006.png"
+  },
+  {
+   "i": 7,
+   "s": 5.82,
+   "e": 6.84,
+   "t": "HER BODY ISN'T EVEN",
+   "png": "captions/cap_007.png"
+  },
+  {
+   "i": 8,
+   "s": 6.84,
+   "e": 8.26,
+   "t": "ABSORBING IT",
+   "png": "captions/cap_008.png"
+  },
+  {
+   "i": 9,
+   "s": 8.26,
+   "e": 9.58,
+   "t": "WHY IS IT",
+   "png": "captions/cap_009.png"
+  },
+  {
+   "i": 10,
+   "s": 9.58,
+   "e": 10.34,
+   "t": "DOING THAT",
+   "png": "captions/cap_010.png"
+  },
+  {
+   "i": 11,
+   "s": 10.34,
+   "e": 11.5,
+   "t": "YOU MIGHT ASK?",
+   "png": "captions/cap_011.png"
+  },
+  {
+   "i": 12,
+   "s": 11.5,
+   "e": 12.12,
+   "t": "WELL",
+   "png": "captions/cap_012.png"
+  },
+  {
+   "i": 13,
+   "s": 12.12,
+   "e": 13.06,
+   "t": "MOST CREATINE IS",
+   "png": "captions/cap_013.png"
+  },
+  {
+   "i": 14,
+   "s": 13.06,
+   "e": 14.18,
+   "t": "CHEAP AND PACKED",
+   "png": "captions/cap_014.png"
+  },
+  {
+   "i": 15,
+   "s": 14.18,
+   "e": 15.32,
+   "t": "WITH FILLER",
+   "png": "captions/cap_015.png"
+  },
+  {
+   "i": 16,
+   "s": 15.32,
+   "e": 16.02,
+   "t": "YOUR GUT TAKES",
+   "png": "captions/cap_016.png"
+  },
+  {
+   "i": 17,
+   "s": 16.02,
+   "e": 16.86,
+   "t": "ONE LOOK AT THAT",
+   "png": "captions/cap_017.png"
+  },
+  {
+   "i": 18,
+   "s": 16.86,
+   "e": 17.42,
+   "t": "JUNK",
+   "png": "captions/cap_018.png"
+  },
+  {
+   "i": 19,
+   "s": 17.42,
+   "e": 18.2,
+   "t": "PANICS",
+   "png": "captions/cap_019.png"
+  },
+  {
+   "i": 20,
+   "s": 18.2,
+   "e": 19.32,
+   "t": "AND FLOODS ITSELF WITH",
+   "png": "captions/cap_020.png"
+  },
+  {
+   "i": 21,
+   "s": 19.32,
+   "e": 20.52,
+   "t": "WATER TO FLUSH IT OUT",
+   "png": "captions/cap_021.png"
+  },
+  {
+   "i": 22,
+   "s": 20.52,
+   "e": 21.54,
+   "t": "BECAUSE IT THINKS IT'S",
+   "png": "captions/cap_022.png"
+  },
+  {
+   "i": 23,
+   "s": 21.54,
+   "e": 23.12,
+   "t": "A FOREIGN CONTAMINANT",
+   "png": "captions/cap_023.png"
+  },
+  {
+   "i": 24,
+   "s": 23.12,
+   "e": 24.56,
+   "t": "THAT'S YOUR BLOAT",
+   "png": "captions/cap_024.png"
+  },
+  {
+   "i": 25,
+   "s": 24.56,
+   "e": 25.56,
+   "t": "THE PUFFINESS",
+   "png": "captions/cap_025.png"
+  },
+  {
+   "i": 26,
+   "s": 25.56,
+   "e": 26.06,
+   "t": "THE RUN TO THE",
+   "png": "captions/cap_026.png"
+  },
+  {
+   "i": 27,
+   "s": 26.06,
+   "e": 27.04,
+   "t": "BATHROOM",
+   "png": "captions/cap_027.png"
+  },
+  {
+   "i": 28,
+   "s": 27.04,
+   "e": 27.92,
+   "t": "PEOPLE BLAME THE",
+   "png": "captions/cap_028.png"
+  },
+  {
+   "i": 29,
+   "s": 27.92,
+   "e": 28.92,
+   "t": "CREATINE AND QUIT",
+   "png": "captions/cap_029.png"
+  },
+  {
+   "i": 30,
+   "s": 28.92,
+   "e": 29.9,
+   "t": "WHEN THE CREATINE",
+   "png": "captions/cap_030.png"
+  },
+  {
+   "i": 31,
+   "s": 29.9,
+   "e": 30.56,
+   "t": "WAS NEVER THE",
+   "png": "captions/cap_031.png"
+  },
+  {
+   "i": 32,
+   "s": 30.56,
+   "e": 31.26,
+   "t": "PROBLEM",
+   "png": "captions/cap_032.png"
+  },
+  {
+   "i": 33,
+   "s": 31.26,
+   "e": 32.32,
+   "t": "IT'S THE JUNK MIXED",
+   "png": "captions/cap_033.png"
+  },
+  {
+   "i": 34,
+   "s": 32.32,
+   "e": 33.7,
+   "t": "IN WITH IT",
+   "png": "captions/cap_034.png"
+  },
+  {
+   "i": 35,
+   "s": 33.7,
+   "e": 34.52,
+   "t": "NECTAR CREATINE",
+   "png": "captions/cap_035.png"
+  },
+  {
+   "i": 36,
+   "s": 34.52,
+   "e": 35.4,
+   "t": "ON THE OTHER HAND",
+   "png": "captions/cap_036.png"
+  },
+  {
+   "i": 37,
+   "s": 35.4,
+   "e": 36.48,
+   "t": "IS PURE",
+   "png": "captions/cap_037.png"
+  },
+  {
+   "i": 38,
+   "s": 36.48,
+   "e": 38.42,
+   "t": "A CLEAN 5 GRAMS",
+   "png": "captions/cap_038.png"
+  },
+  {
+   "i": 39,
+   "s": 38.42,
+   "e": 39.36,
+   "t": "ZERO SUGAR",
+   "png": "captions/cap_039.png"
+  },
+  {
+   "i": 40,
+   "s": 39.36,
+   "e": 40.44,
+   "t": "ZERO CALORIES",
+   "png": "captions/cap_040.png"
+  },
+  {
+   "i": 41,
+   "s": 40.44,
+   "e": 41.1,
+   "t": "FLAVORED WITH",
+   "png": "captions/cap_041.png"
+  },
+  {
+   "i": 42,
+   "s": 41.1,
+   "e": 42.42,
+   "t": "ORGANIC FRUIT",
+   "png": "captions/cap_042.png"
+  },
+  {
+   "i": 43,
+   "s": 42.42,
+   "e": 43.56,
+   "t": "NON-GMO",
+   "png": "captions/cap_043.png"
+  },
+  {
+   "i": 44,
+   "s": 43.56,
+   "e": 44.38,
+   "t": "VEGAN",
+   "png": "captions/cap_044.png"
+  },
+  {
+   "i": 45,
+   "s": 44.38,
+   "e": 45.0,
+   "t": "NO ARTIFICIAL",
+   "png": "captions/cap_045.png"
+  },
+  {
+   "i": 46,
+   "s": 45.0,
+   "e": 46.12,
+   "t": "ANYTHING",
+   "png": "captions/cap_046.png"
+  },
+  {
+   "i": 47,
+   "s": 46.12,
+   "e": 46.84,
+   "t": "AND IT'S GOT",
+   "png": "captions/cap_047.png"
+  },
+  {
+   "i": 48,
+   "s": 46.84,
+   "e": 47.78,
+   "t": "BIOPERINE",
+   "png": "captions/cap_048.png"
+  },
+  {
+   "i": 49,
+   "s": 47.78,
+   "e": 48.26,
+   "t": "SO YOUR BODY",
+   "png": "captions/cap_049.png"
+  },
+  {
+   "i": 50,
+   "s": 48.26,
+   "e": 49.52,
+   "t": "ACTUALLY ABSORBS IT",
+   "png": "captions/cap_050.png"
+  },
+  {
+   "i": 51,
+   "s": 49.52,
+   "e": 50.28,
+   "t": "INSTEAD OF FLUSHING",
+   "png": "captions/cap_051.png"
+  },
+  {
+   "i": 52,
+   "s": 50.28,
+   "e": 51.12,
+   "t": "IT OUT",
+   "png": "captions/cap_052.png"
+  },
+  {
+   "i": 53,
+   "s": 51.12,
+   "e": 51.96,
+   "t": "JUST POUR A PACKET",
+   "png": "captions/cap_053.png"
+  },
+  {
+   "i": 54,
+   "s": 51.96,
+   "e": 52.9,
+   "t": "INTO WATER AND",
+   "png": "captions/cap_054.png"
+  },
+  {
+   "i": 55,
+   "s": 52.9,
+   "e": 53.4,
+   "t": "DRINK IT",
+   "png": "captions/cap_055.png"
+  },
+  {
+   "i": 56,
+   "s": 53.4,
+   "e": 55.0,
+   "t": "NO CHALKY SLUDGE",
+   "png": "captions/cap_056.png"
+  },
+  {
+   "i": 57,
+   "s": 55.0,
+   "e": 55.7,
+   "t": "NO GRIT AT THE",
+   "png": "captions/cap_057.png"
+  },
+  {
+   "i": 58,
+   "s": 55.7,
+   "e": 56.38,
+   "t": "BOTTOM",
+   "png": "captions/cap_058.png"
+  },
+  {
+   "i": 59,
+   "s": 56.72,
+   "e": 57.32,
+   "t": "NOTHING FOR YOUR GUT",
+   "png": "captions/cap_059.png"
+  },
+  {
+   "i": 60,
+   "s": 57.32,
+   "e": 58.56,
+   "t": "TO PANIC OVER",
+   "png": "captions/cap_060.png"
+  },
+  {
+   "i": 61,
+   "s": 58.56,
+   "e": 59.54,
+   "t": "THIS IS WHAT IT'S",
+   "png": "captions/cap_061.png"
+  },
+  {
+   "i": 62,
+   "s": 59.54,
+   "e": 60.06,
+   "t": "LIKE WHEN YOUR",
+   "png": "captions/cap_062.png"
+  },
+  {
+   "i": 63,
+   "s": 60.06,
+   "e": 60.9,
+   "t": "BODY ACTUALLY",
+   "png": "captions/cap_063.png"
+  },
+  {
+   "i": 64,
+   "s": 60.9,
+   "e": 62.06,
+   "t": "ABSORBS IT",
+   "png": "captions/cap_064.png"
+  },
+  {
+   "i": 65,
+   "s": 62.06,
+   "e": 63.26,
+   "t": "ALL YOU DO IS POUR A",
+   "png": "captions/cap_065.png"
+  },
+  {
+   "i": 66,
+   "s": 63.26,
+   "e": 64.04,
+   "t": "PACKET INTO WATER",
+   "png": "captions/cap_066.png"
+  },
+  {
+   "i": 67,
+   "s": 64.04,
+   "e": 65.14,
+   "t": "EVERY MORNING",
+   "png": "captions/cap_067.png"
+  },
+  {
+   "i": 68,
+   "s": 65.14,
+   "e": 66.2,
+   "t": "AND IT COMES WITH A",
+   "png": "captions/cap_068.png"
+  },
+  {
+   "i": 69,
+   "s": 66.2,
+   "e": 67.28,
+   "t": "30-DAY MONEY-BACK",
+   "png": "captions/cap_069.png"
+  },
+  {
+   "i": 70,
+   "s": 67.28,
+   "e": 68.06,
+   "t": "GUARANTEE",
+   "png": "captions/cap_070.png"
+  },
+  {
+   "i": 71,
+   "s": 68.06,
+   "e": 68.88,
+   "t": "SO IF IT DOES",
+   "png": "captions/cap_071.png"
+  },
+  {
+   "i": 72,
+   "s": 68.88,
+   "e": 69.54,
+   "t": "NOTHING",
+   "png": "captions/cap_072.png"
+  },
+  {
+   "i": 73,
+   "s": 69.54,
+   "e": 70.72,
+   "t": "YOU PAY NOTHING",
+   "png": "captions/cap_073.png"
+  },
+  {
+   "i": 74,
+   "s": 70.72,
+   "e": 71.72,
+   "t": "GIVE IT A SHOT",
+   "png": "captions/cap_074.png"
+  },
+  {
+   "i": 75,
+   "s": 71.72,
+   "e": 72.5,
+   "t": "YOUR BODY WILL",
+   "png": "captions/cap_075.png"
+  },
+  {
+   "i": 76,
+   "s": 72.5,
+   "e": 73.68,
+   "t": "THANK YOU",
+   "png": "captions/cap_076.png"
+  }
+ ],
+ "graphics": [
+  {
+   "name": "title_why_bloat",
+   "png": "graphics/title_why_bloat.png",
+   "s": 2.55,
+   "e": 8.15
+  },
+  {
+   "name": "icon_1_nongmo",
+   "png": "graphics/icon_1_nongmo.png",
+   "s": 42.370000000000005,
+   "e": 51.0
+  },
+  {
+   "name": "icon_2_vegan",
+   "png": "graphics/icon_2_vegan.png",
+   "s": 43.510000000000005,
+   "e": 51.0
+  },
+  {
+   "name": "icon_3_no",
+   "png": "graphics/icon_3_no.png",
+   "s": 44.330000000000005,
+   "e": 51.0
+  },
+  {
+   "name": "icon_4_bioperine",
+   "png": "graphics/icon_4_bioperine.png",
+   "s": 46.790000000000006,
+   "e": 51.0
+  },
+  {
+   "name": "guarantee",
+   "png": "graphics/guarantee.png",
+   "s": 65.0,
+   "e": 70.6
+  }
+ ]
+}

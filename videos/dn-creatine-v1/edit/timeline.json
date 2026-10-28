@@ -1,0 +1,310 @@
+{
+ "fps": 24,
+ "duration": 75.83,
+ "video": [
+  {
+   "slot": "S01",
+   "clip": "S01",
+   "start": 0.0,
+   "end": 1.55,
+   "in": 0.2
+  },
+  {
+   "slot": "S02",
+   "clip": "S02",
+   "start": 1.55,
+   "end": 2.55,
+   "in": 1.0
+  },
+  {
+   "slot": "S03",
+   "clip": "S03",
+   "start": 2.55,
+   "end": 4.75,
+   "in": 1.5
+  },
+  {
+   "slot": "S04",
+   "clip": "S04",
+   "start": 4.75,
+   "end": 8.15,
+   "in": 0.5
+  },
+  {
+   "slot": "S05",
+   "clip": "S05",
+   "start": 8.15,
+   "end": 11.4,
+   "in": 0.5
+  },
+  {
+   "slot": "S06",
+   "clip": "S06",
+   "start": 11.4,
+   "end": 15.2,
+   "in": 0.3
+  },
+  {
+   "slot": "S07",
+   "clip": "S07",
+   "start": 15.2,
+   "end": 18.1,
+   "in": 0.3
+  },
+  {
+   "slot": "S08",
+   "clip": "S08",
+   "start": 18.1,
+   "end": 23.0,
+   "in": 0.05
+  },
+  {
+   "slot": "S09",
+   "clip": "S09",
+   "start": 23.0,
+   "end": 24.45,
+   "in": 2.0
+  },
+  {
+   "slot": "S10",
+   "clip": "S10",
+   "start": 24.45,
+   "end": 26.9,
+   "in": 0.5
+  },
+  {
+   "slot": "S11",
+   "clip": "S11",
+   "start": 26.9,
+   "end": 31.15,
+   "in": 0.3
+  },
+  {
+   "slot": "S07b",
+   "clip": "S07",
+   "start": 31.15,
+   "end": 33.55,
+   "in": 2.5
+  },
+  {
+   "slot": "S12",
+   "clip": "S12",
+   "start": 33.55,
+   "end": 36.35,
+   "in": 0.5
+  },
+  {
+   "slot": "S13",
+   "clip": "S13",
+   "start": 36.35,
+   "end": 42.3,
+   "in": 0.0,
+   "mode": "fit"
+  },
+  {
+   "slot": "S14",
+   "clip": "S14",
+   "start": 42.3,
+   "end": 46.0,
+   "in": 0.0,
+   "mode": "reverse"
+  },
+  {
+   "slot": "S17b",
+   "clip": "S17b",
+   "start": 46.0,
+   "end": 51.0,
+   "in": 0.0
+  },
+  {
+   "slot": "S15",
+   "clip": "S15",
+   "start": 51.0,
+   "end": 53.3,
+   "in": 0.0,
+   "mode": "speed",
+   "speed": 1.5
+  },
+  {
+   "slot": "S16",
+   "clip": "S16",
+   "start": 53.3,
+   "end": 56.6,
+   "in": 0.5
+  },
+  {
+   "slot": "S17",
+   "clip": "S17",
+   "start": 56.6,
+   "end": 58.45,
+   "in": 1.0
+  },
+  {
+   "slot": "S18",
+   "clip": "S18",
+   "start": 58.45,
+   "end": 61.95,
+   "in": 0.8
+  },
+  {
+   "slot": "S19",
+   "clip": "S19",
+   "start": 61.95,
+   "end": 65.0,
+   "in": 0.5
+  },
+  {
+   "slot": "S20",
+   "clip": "S20",
+   "start": 65.0,
+   "end": 70.6,
+   "in": 0.0,
+   "mode": "hold"
+  },
+  {
+   "slot": "S21",
+   "clip": "S21",
+   "start": 70.6,
+   "end": 75.83,
+   "in": 0.0,
+   "mode": "hold"
+  }
+ ],
+ "sfx": [
+  {
+   "f": "01_powder_pour",
+   "t": 0.1,
+   "db": -6
+  },
+  {
+   "f": "02_clock_spin",
+   "t": 1.55,
+   "db": -6
+  },
+  {
+   "f": "11_pop",
+   "t": 2.55,
+   "db": -8
+  },
+  {
+   "f": "03_balloon_inflate",
+   "t": 2.6,
+   "db": -6
+  },
+  {
+   "f": "04_jelly_wobble",
+   "t": 5.3,
+   "db": -8
+  },
+  {
+   "f": "04_jelly_wobble",
+   "t": 9.7,
+   "db": -8
+  },
+  {
+   "f": "05_whoosh_dive",
+   "t": 11.25,
+   "db": -5
+  },
+  {
+   "f": "06_powder_rain_gasps",
+   "t": 15.2,
+   "db": -6
+  },
+  {
+   "f": "07_water_gush",
+   "t": 18.15,
+   "db": -8
+  },
+  {
+   "f": "08_monster_gurgle",
+   "t": 22.95,
+   "db": -6
+  },
+  {
+   "f": "17_squish_steps",
+   "t": 24.6,
+   "db": -7
+  },
+  {
+   "f": "09_bin_drop",
+   "t": 27.3,
+   "db": -5
+  },
+  {
+   "f": "06_powder_rain_gasps",
+   "t": 31.15,
+   "db": -10
+  },
+  {
+   "f": "10_magic_reveal",
+   "t": 33.55,
+   "db": -6
+  },
+  {
+   "f": "14_sparkle_soft",
+   "t": 36.4,
+   "db": -9
+  },
+  {
+   "f": "11_pop",
+   "t": 42.37,
+   "db": -6
+  },
+  {
+   "f": "11_pop",
+   "t": 43.51,
+   "db": -6
+  },
+  {
+   "f": "11_pop",
+   "t": 44.33,
+   "db": -6
+  },
+  {
+   "f": "11_pop",
+   "t": 46.79,
+   "db": -6
+  },
+  {
+   "f": "14_sparkle_soft",
+   "t": 47.2,
+   "db": -10
+  },
+  {
+   "f": "01_powder_pour",
+   "t": 51.0,
+   "db": -6
+  },
+  {
+   "f": "18_sip_ahh",
+   "t": 52.5,
+   "db": -8
+  },
+  {
+   "f": "12_fizz_dissolve",
+   "t": 53.3,
+   "db": -8
+  },
+  {
+   "f": "13_deflate_poof",
+   "t": 58.5,
+   "db": -7
+  },
+  {
+   "f": "15_whoosh_short",
+   "t": 61.85,
+   "db": -8
+  },
+  {
+   "f": "16_ding",
+   "t": 65.05,
+   "db": -7
+  },
+  {
+   "f": "15_whoosh_short",
+   "t": 70.5,
+   "db": -9
+  }
+ ]
+}
