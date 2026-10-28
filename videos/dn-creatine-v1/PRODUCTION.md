@@ -176,3 +176,14 @@ All 21 clips are kling3_0 pro, 5 s, silent, 9:16 (1076×1924, scaled to 1080×19
   4 ingredient badges (BioPerine = "helps nutrient absorption"), guarantee.
 - Deliverables: `dist/DNCR5_V1_Premiere.zip` (FCP7 XML + media), `edit/preview/DNCR5_V1_preview.mp4`.
   Rebuild everything with `python3 scripts/make_graphics.py edit/words.json edit && python3 scripts/build_edit.py`.
+
+## 15. Client revisions (2026-10-28)
+1. BioPerine line: the client clarified BioPerine = black pepper extract. Replaced S17b with S17a (a clay black-pepper
+   sprig with a peppercorn hero, 84a25f38 → 7f0ca888) + S17c (the peppercorn spreading golden sparkles into the gut
+   walls, 2d3696cc → fab8f333). Absorption kept general.
+2. Pour: no woman. Tight on a glass of ice water, stick tip from the top of frame, powder blooming into a translucent white
+   drink (S15n 8f61c9aa → 51fc3d79).
+3. Drink: she drinks the same white iced drink (S15d c6bf1285 → 919e75b6).
+4. Continuity fix (my call): the old S16 showed clear water. Replaced it with S16n, the same white drink with a clean
+   glass bottom (fec86f60 → 8b3a24c7), on "no grit at the bottom".
+SFX added: 19_ice_clink, 20_powder_on_ice, 21_boing_twinkle.

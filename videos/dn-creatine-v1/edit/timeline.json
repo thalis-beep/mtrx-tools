@@ -110,27 +110,39 @@
    "mode": "reverse"
   },
   {
-   "slot": "S17b",
-   "clip": "S17b",
+   "slot": "S17a",
+   "clip": "S17a",
    "start": 46.0,
+   "end": 47.75,
+   "in": 0.3
+  },
+  {
+   "slot": "S17c",
+   "clip": "S17c",
+   "start": 47.75,
    "end": 51.0,
-   "in": 0.0
+   "in": 0.2
   },
   {
-   "slot": "S15",
-   "clip": "S15",
+   "slot": "S15n",
+   "clip": "S15n",
    "start": 51.0,
-   "end": 53.3,
-   "in": 0.0,
-   "mode": "speed",
-   "speed": 1.5
+   "end": 52.85,
+   "in": 0.2
   },
   {
-   "slot": "S16",
-   "clip": "S16",
-   "start": 53.3,
+   "slot": "S15d",
+   "clip": "S15d",
+   "start": 52.85,
+   "end": 55.0,
+   "in": 0.3
+  },
+  {
+   "slot": "S16n",
+   "clip": "S16n",
+   "start": 55.0,
    "end": 56.6,
-   "in": 0.5
+   "in": 1.0
   },
   {
    "slot": "S17",
@@ -262,29 +274,39 @@
    "db": -6
   },
   {
+   "f": "21_boing_twinkle",
+   "t": 46.05,
+   "db": -8
+  },
+  {
    "f": "11_pop",
    "t": 46.79,
    "db": -6
   },
   {
    "f": "14_sparkle_soft",
-   "t": 47.2,
-   "db": -10
+   "t": 47.8,
+   "db": -9
   },
   {
-   "f": "01_powder_pour",
+   "f": "20_powder_on_ice",
    "t": 51.0,
    "db": -6
   },
   {
-   "f": "18_sip_ahh",
-   "t": 52.5,
-   "db": -8
+   "f": "19_ice_clink",
+   "t": 52.9,
+   "db": -7
   },
   {
-   "f": "12_fizz_dissolve",
+   "f": "18_sip_ahh",
    "t": 53.3,
-   "db": -8
+   "db": -9
+  },
+  {
+   "f": "19_ice_clink",
+   "t": 55.0,
+   "db": -10
   },
   {
    "f": "13_deflate_poof",
