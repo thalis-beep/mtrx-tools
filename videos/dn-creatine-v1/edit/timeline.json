@@ -121,7 +121,8 @@
    "clip": "S17c",
    "start": 47.75,
    "end": 51.0,
-   "in": 0.2
+   "in": 0.0,
+   "mode": "fit"
   },
   {
    "slot": "S15n",
@@ -289,9 +290,9 @@
    "db": -6
   },
   {
-   "f": "14_sparkle_soft",
+   "f": "23_water_drain",
    "t": 47.8,
-   "db": -9
+   "db": -8
   },
   {
    "f": "20_powder_on_ice",
