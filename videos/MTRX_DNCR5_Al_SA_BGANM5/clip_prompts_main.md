@@ -43,3 +43,12 @@ Voice tags (paste as-is):
 Shots 06–10, roughly 4+4+4+4+6 s ≈ 220 credits first pass. It gets cut onto the same body (shots 11–28), so only the hook needs animating.
 
 Editor-only items: "after forty" graphic over 20a/20b · callouts over 22b/23 · "3 months later" card · 4 black text cards · end card (real variety-pack packshot + 30-day money-back guarantee).
+
+## Model switch candidate: Kling 4.0 (`kling4_0`, mode `image-to-video`)
+- Quoted 2026-10-28: 10 s at 1080p = 32.5 cr (~3.25 cr/s) · 10 s at 720p = 22.5 cr (~2.25 cr/s). Duration 3–30 s.
+- Whole main video (~150 s): ~490 cr at 1080p, ~340 cr at 720p, so it fits the ~600 cr target.
+- ⚠ The catalog lists no audio/sound parameter, so native lip-synced speech is **unverified**. Test first.
+- Test clips (12 s, 1080p, ~39 cr each), ready to submit:
+  - T1: start frame shot 12 (b406c71f…), Mom's lines 12 and 13 combined.
+  - T2: start frame shot 22 (f34e0635…), Daughter's lines 22a and 22b combined, holding the pouch.
+- Submission is blocked: "POD 4 - South Coast" group monthly credit limit reached (HTTP 429).
