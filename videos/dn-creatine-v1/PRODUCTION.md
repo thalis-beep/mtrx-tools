@@ -187,3 +187,12 @@ All 21 clips are kling3_0 pro, 5 s, silent, 9:16 (1076×1924, scaled to 1080×19
 4. Continuity fix (my call): the old S16 showed clear water. Replaced it with S16n, the same white drink with a clean
    glass bottom (fec86f60 → 8b3a24c7), on "no grit at the bottom".
 SFX added: 19_ice_clink, 20_powder_on_ice, 21_boing_twinkle.
+
+## 16. Client revisions round 2 (2026-10-28)
+1. "Most creatine is cheap and packed with filler": new S06f shows the same grey generic sachet from S01 with a powder
+   pile that is half clean white and half black-mould filler (still bebd0538 → reframed edit 6f68e85d so the captions sit
+   below the pile; clip 4978f9b6, mould creeps while the camera pushes in). The gut dive (S06) is kept as a 1.2 s
+   bridge into S07 so "your gut takes one look" still lands inside the body.
+2. S03/S04 zoom-out with no regeneration: a bottom-anchored 85% scale of the original pixels and motion. The new top and
+   side edges come from two Higgsfield reframe passes (9:16→3:4, then a top crop→9:16); see `scripts/zoom_out.py`.
+   Hair top moves from y≈290 to ≈540, clear of the "WHY CREATINE MAKES YOU BLOAT" title (y 283–481).

@@ -79,3 +79,14 @@ What failed and the fix:
 - A belly-glow variant left a floating green blob in a later shot. Remove variant effects (glow) from
   the still before animating scenes where the character is back to normal.
 ```
+
+```
+Job: DN Creatine V1, revisions round 2  Date: 2026-10-28
+- "Zoom out, but keep the exact same shot": don't regenerate. Use a bottom-anchored scale of the original plus
+  Higgsfield `reframe` for the new edges. Pass 1: 9:16→3:4 (sides). Pass 2: a top crop→9:16 (top; discard
+  the regenerated bottom). Then composite with feathering: reframe top < reframe sides < original. Reframe keeps the source at
+  the same scale and position (checked: offset exact, ±1 frame), but re-renders its texture, so always put the original
+  back on top. Cost at 720p is about 5 cr/s per pass (1080p is about 12.6 cr/s). Clips under about 3 s failed, so pad to 3.4 s or more.
+- Check where the caption band sits (y≈1330) against the subject before animating an insert shot; one image
+  edit "move the subject up, leave the lower third empty" fixes it for 1.5 cr.
+```
