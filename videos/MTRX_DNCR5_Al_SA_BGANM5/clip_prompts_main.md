@@ -52,3 +52,16 @@ Editor-only items: "after forty" graphic over 20a/20b · callouts over 22b/23 ·
   - T1: start frame shot 12 (b406c71f…), Mom's lines 12 and 13 combined.
   - T2: start frame shot 22 (f34e0635…), Daughter's lines 22a and 22b combined, holding the pouch.
 - Submission is blocked: "POD 4 - South Coast" group monthly credit limit reached (HTTP 429).
+
+## Budget model options (quoted 2026-10-28, 8 s clip / whole video ~150 s)
+| Option | 8 s | Whole video | Native voice + lip-sync |
+|---|---|---|---|
+| veo3_1 preview/high | 80 | ~1,500 | yes |
+| veo3_1 fast/basic (~720p) | 32 | ~600 | yes |
+| veo3_1_lite + generate_audio | 12 | ~225 | yes (tested ✅) |
+| kling4_0 1080p | ~26 | ~490 | unverified (no audio param) |
+
+### Test result: veo3_1_lite, shot 22a (job 6204ab3a-cd48-4bdc-a3ab-3624a1947f87)
+- 720×1280, 8 s, 48 kHz audio. Whisper transcript: "Because they're not taking good quality stuff, Mom. Most creatine is packed with artificial fillers your body can't absorb." (0.0–7.0 s), word-exact.
+- Pouch stays on-model and readable until ~7.0 s, then vanishes in the last second. **Trim at 7.0 s.**
+- Mom test (shot 13) and the veo3_1 fast/basic tests are blocked by the group credit limit (429).
