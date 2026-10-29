@@ -120,3 +120,7 @@ Output: `MTRX_DNCR5_Al_SA_BGANM5_V2.mp4`, 131 s, −14 LUFS. Built by `edit/asse
 ## V3 — 2026-10-29
 - Shot 1: 8dfc4b33 (misses a step and falls FORWARD up the stairs, back to camera). Alt take 720a7a69.
 - Shot 4: 7c5d4f13, tired/confused delivery ("I'm fine... I'm fine. Just... lost my footing"), face crop to remove a stray head at bottom-left. Alt 6de8c4f2 rejected (burned-in subtitles).
+
+## V4 — 2026-10-29
+- Shot 18 re-rolled so only the daughter speaks and the mother stays silent, reacting with body language. Chosen: a192ddea (`clips/v4/18_WIDE_mom_silent.mp4`). All other clips are as in V3.
+- All 4 takes (04a524a4, ea232dd8, aacf97b6, a192ddea) have the daughter briefly face the lens (~0.4 s at ~1 s) while lifting the packet. It's caused by the handoff motion in start frame 99544d2f. Fix if needed: new start frame with her already extending the stick in profile.
