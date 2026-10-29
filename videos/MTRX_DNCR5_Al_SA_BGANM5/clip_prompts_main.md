@@ -108,3 +108,11 @@ Full-cut whisper transcript matches every script line in order.
 | 27 | eae87a19 | |
 | 28 | fb353a12 | Hug, pull back to the vista |
 | Cards | — | "3 months later" · 4 accumulating black cards (wink emoji) · end card from the client's real pouch photo + 30-day guarantee |
+
+## V2 — client revisions 2026-10-29
+Output: `MTRX_DNCR5_Al_SA_BGANM5_V2.mp4`, 131 s, −14 LUFS. Built by `edit/assemble_v2.py`; prompts in `build_requests_v2.py`.
+- Hook 1: no laundry basket. Mom walks up, stumbles and falls to her knees (h1). Face shot on her knees (h2). Daughter on a clean floor (h3). Close-up on her knees, no daughter (h4).
+- Couch: three locked setups taken from the client's reference frames. WIDE (mom left / daughter right) = 87d8806b, WIDE+product = 99544d2f. MOM single = 06c4c6fd (sleeve removed from 1501ba36), MOM+stick = ec2483a4. DAUGHTER single = c97918d6, DAUGHTER+pouch = 0e999eab.
+- Cut plan: 11 W · 12 M · 13 W · 14 D · 15 M · 16 D · 17 M · 18 W+ · 19 M+ · 20a D+ · 20b W+ · 21 M+ · 22a D+ · 22b W+→hero · 24 M+
+- Final clips: h1 f2926a75 · h2 83ddbd7f (re-roll; first take looked into the lens) · h3 17adcff0 · h4 04eaf1e8 · 12 fec61781 (re-roll; daughter's hair at edge) · 13 8222307f · 15 418f647a · 16 51e0008b (14% left crop: mom's hair at edge) · 17 7b756796 (14% right crop) · 18 b1753604 · 19 af73293f · 20a d9599d21 · 20b 5565188a · 21 c952ceed (re-roll; stick vanished + stray hand) · 22a 24a09623 · 22b ecf246e1 · 24 ff2b5ebc (re-roll; stick vanished)
+- Known model habit: Veo keeps pulling the off-frame partner into the edge of single shots. Fixed by re-roll or an edge crop.
