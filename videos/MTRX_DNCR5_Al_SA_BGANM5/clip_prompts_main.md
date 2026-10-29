@@ -77,3 +77,34 @@ Editor-only items: "after forty" graphic over 20a/20b · callouts over 22b/23 ·
 |---|---|---|
 | 05 | 9eb2e944-0f02-48a5-be16-08964c92fc28 | ✅ "Are you sure?" word-exact. Eyeline is up toward Mom from ~1.5 s; the first second sits near the lens because the start frame faces almost front-on. Acceptable; if rejected, re-roll the still with her head turned up/right (2 cr) |
 | 01–04, 11–28 | — | blocked by group credit limit (429) |
+
+## V1 — assembled 2026-10-29 (Veo 3.1 Lite)
+Output: `MTRX_DNCR5_Al_SA_BGANM5_V1.mp4`, 1080×1920, 30 fps, 132 s, −14 LUFS / −1.3 dBTP. Built by `edit/assemble.py` (timeline in CS-script order) with graphics from `edit/gfx.py`.
+Full-cut whisper transcript matches every script line in order.
+
+| Shot | Final job | Notes |
+|---|---|---|
+| 01 | 09e2b4fd | Slip + basket tumble, SFX only |
+| 02 | cdb5ae33 | |
+| 03 | 2fe0fa1a | |
+| 04 | 0b9d9fcc | |
+| 05 | 9eb2e944 | |
+| 11 | 85e22e68 | |
+| 12 | 46d07e2b | |
+| 13 | 43605cf9 | Re-roll. v1 6b25d7cc had a mid-line dissolve |
+| 14 | fe0a9c8f | |
+| 15 | 68bcec6d | |
+| 16 | f60a816a | |
+| 17 | 06316178 | Trimmed in at 0.9 s |
+| 18 | d4424d21 | Stick pack handed over |
+| 19 | 9d07c8d5 | Trimmed at 3.4 s (stick vanishes after the line) |
+| 20a / 20b | 7b81387e / 1fae587b | ATP graphics overlaid; 20b cut before a stray "mm-hmm" |
+| 21 | ba363d99 | |
+| 22a | 70ad6b48 | |
+| 22b + 23 | 5d523315 + e100d389 | 1.55 s on the daughter, then product hero (slowed 1.5×) with 5 callouts timed to her words |
+| 24 | a6af6343 | |
+| 25 | 345c6be8 | Re-roll from new side-angle still 9fdf8bc2. v1 fa076144 read as talking to the lens |
+| 26 | 5878abc1 | |
+| 27 | eae87a19 | |
+| 28 | fb353a12 | Hug, pull back to the vista |
+| Cards | — | "3 months later" · 4 accumulating black cards (wink emoji) · end card from the client's real pouch photo + 30-day guarantee |
